@@ -73,7 +73,9 @@ button{
     color:var(--violet);
     font-family:'Poppins';
     margin:30px 0;
-    transition: all .5s;
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
     box-shadow: 1px 1px 5px black;
     
 }
@@ -107,7 +109,9 @@ ul li a{
     display:flex;
     justify-content: center;
     align-items: center;
-    transition:all .5s;
+    transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -moz-transition: all .5s ease-in;
 }
 
 ul li a:hover{
@@ -124,14 +128,12 @@ ul li a:hover i{
         grid-template-columns: 1fr 1fr;
         gap: 50px;
         width: 100vw;
-        
-        
-
     }
+
     body{
         background: var(--violet) url('images/bg-desktop.svg');
-        font-size:;
     }
+    
 img.logo{
     grid-column: span 2;
     margin-bottom: 50px;
