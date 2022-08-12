@@ -152,5 +152,6 @@ img.logo{
 
    button{
     height:50px;
+    align-self: flex-start;
    }
 }
