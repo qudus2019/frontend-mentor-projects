@@ -31,7 +31,7 @@ body{
     justify-content: center;
     border-radius: 15px;
     position:relative;
-    margin:10% auto;
+    margin:50% auto;
 
 }
 
@@ -118,7 +118,7 @@ div.stats > div p.sub{
 
 @media screen and (min-width:800px){
 #card{
-
+margin:10% auto;
 }
 }
 
