@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+:root{
+
+
+--violet: hsl(257, 40%, 49%);
+--smagenta: hsl(300, 69%, 71%);
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Open Sans';
+    background: var(--violet) url('images/bg-mobile.svg') no-repeat top;
+    
+
+}
+
+h1{
+    font-family: 'Poppins';
+    text-align: center;
+    font-size: 1.5em;
+    padding: 12% 0 7% 0;
+    
+}
+
+img.logo{
+    width:170px;
+    height:40px;
+    margin-bottom: 20%;
+}
+
+div.card{
+    width:600px;
+    max-width: 90vw;
+    padding: 22px;
+    margin:0 auto;
+}
+
+div.image{
+    width:100%;
+}
+
+div.image img{
+width: 100%;
+}
+
+div.text{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1,p{
+color:white;
+text-align: center;
+}
+
+p{
+    font-size: .98em;
+}
+
+button{
+    width:200px;
+    height:40px;
+    border-radius: 25px;
+    border:none;
+    color:var(--violet);
+    font-family:'Poppins';
+    margin:30px 0;
+    transition: all .5s;
+    box-shadow: 1px 1px 5px black;
+    
+}
+
+button:hover{
+background-color: var(--smagenta);
+color:white;
+}
+
+ul.socials{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    margin-right: 20px;
+}
+
+ul.socials li i{
+   font-size: 1em;
+   color:white;
+
+}
+
+ul li a{
+    border:1px solid white;
+    width:30px;
+    height:30px;
+    padding: 10px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition:all .5s;
+}
+
+ul li a:hover{
+    border-color: var(--smagenta);
+}
+
+ul li a:hover i{
+    color:var(--smagenta);
+}
+
+@media screen and (min-width:650px){
+    div.card{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        width: 100vw;
+        
+        
+
+    }
+    body{
+        background: var(--violet) url('images/bg-desktop.svg');
+        font-size:;
+    }
+img.logo{
+    grid-column: span 2;
+    margin-bottom: 50px;
+}
+
+   ul.socials{
+    grid-column: span 2;
+    justify-self: end;
+   }
+
+   h1{
+    font-size: 2.7em;
+   }
+
+   h1,p{
+    text-align: left;
+   }
+
+   button{
+    height:50px;
+   }
+}
