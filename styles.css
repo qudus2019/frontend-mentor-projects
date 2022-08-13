@@ -34,6 +34,7 @@ div.card{
 div.image{
     width:100%;
     position: relative;
+  
 }
 
 div.image img.desktop{
@@ -45,6 +46,7 @@ div.image img{
     position: relative;
     max-height: 100%;
     border-radius: 10px 10px 0 0;
+    
 
 }
 
@@ -56,9 +58,10 @@ div.image::before{
     top:0;
     right:0;
     background-color: var(--Softviolet);
-    opacity: 0.65;
+    opacity: ;
     z-index: 1;
     font-family: 'Lexend Deca';
+    mix-blend-mode: multiply;
 }
 
 div.card div.text{
@@ -117,9 +120,9 @@ ul li p span.span{
 
 @media screen and (min-width:1000px) {
     div.card{
-        width:1100px;
+        width:1115px;
         display: grid;
-        margin-top: 11%;
+        margin-top: 12%;
         grid-template-columns: 1fr 1fr;
     }
 
