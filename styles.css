@@ -141,7 +141,7 @@ ul li p span.span{
     }
 
     div.card div.text{
-        padding:60px 80px 40px 60px;
+        padding:80px 80px 40px 60px;
         grid-column: 1 / span 1;
         grid-row: 1 / span 1;
         text-align: left;
