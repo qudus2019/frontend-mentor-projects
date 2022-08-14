@@ -89,6 +89,7 @@ div.card p.card-paragraph{
     color:var(--GrayishBlue);
     padding-bottom: 10px;
 margin-top:-7px; 
+font-size: .8em;
 }
 
 div.card img{
@@ -166,6 +167,11 @@ margin-top:-10px
         margin-top: 0;
     }
 }
+
+
+
+
+
 
 
 
