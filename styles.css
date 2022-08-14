@@ -165,7 +165,7 @@ div.third ul{
 
 @media screen and (min-width:900px){
     div.card-container{
-        width:700px;
+        width:650px;
         grid-template-columns: 1fr 1fr;
         
     }
