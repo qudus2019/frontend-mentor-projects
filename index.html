@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card-container">
+
+      <div class="first span-2">
+        <h1>Join our community</h1>
+        <h2>30-day, hassle-free money back guarantee</h2>
+        <p>Gain access to our full library of tutorials along with expert code reviews. 
+              Perfect for any developers who are serious about honing their skills.</p>
+      </div>
+      <div class="second span-1">
+        <h2 class="subscription">Monthly Subscription</h2>
+        <p class="subscription-fee"> <span class="price">&dollar;29</span>per month</p>
+        <p class="details">Full access for less than &dollar;1 a day</p>
+        <button>Sign Up</button>
+      </div>
+
+      <div class="third span-1">
+        <h2>Why Us</h2>
+        <ul class="list">
+          <li>Tutorials by industry experts</li>
+          <li>Peer &amp; expert code review</li>
+          <li> Coding exercises</li>
+          <li>Access to our GitHub repos</li>
+          <li>Community forum</li>
+          <li>Flashcard decks</li>
+          <li>New videos every week</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+  <script>
+
+    let p = document.querySelectorAll('p');
+    let h1 = document.querySelectorl('h1');
+    let h2 = document.querySelectorl('h2');
+
+     function show(){
+      p.forEach(function(each){
+        each.style.opacity = 1;
+      })
+
+      h1.style.opacity = 1;
+
+      h2.forEach(function(each){
+        each.style.opacity = 1;
+      })
+    }
+
+    setTimeout(show,1000)
+  </script>
+</body>
+</html>

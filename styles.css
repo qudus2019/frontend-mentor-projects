@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Karla', helvetica;
+    background-color: var(--Light-Gray);
+
+--Cyan: hsl(179, 62%, 43%);
+--Cyan2: hsl(179, 59%, 52%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+div.card-container{
+    width:600px;
+    max-width: 89vw;
+    display:grid;
+    margin:40px auto;
+}
+
+
+
+
+h1{
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
+}
+h2{
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .9s ease-in-out;
+}
+
+p{
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all 1.3s ease-in-out;
+}
+
+div.card-container > div{
+    padding:25px;
+    
+}
+
+div.first{
+    width:100%;
+    background-color: white;
+    padding-bottom: 30px;
+    border-radius: 10px 10px 0 0;
+
+}
+
+div.first h1{
+    color:var(--Cyan);
+    font-size: 1.4em;
+    padding-bottom: 20px;
+}
+
+div.first h2{
+    color:var(--Bright-Yellow);
+    font-size: 1em;
+    padding-bottom: 25px;
+}
+
+div.first p{
+    line-height: 1.7em;
+    color:var(--Grayish-Blue);
+    font-size: .9em;
+}
+
+div.second{
+    background-color:var(--Cyan);
+    
+}
+
+div.second h2{
+    font-size: 1.2em;
+    color:white;
+    padding-bottom:20px;
+}
+
+div.second p.subscription-fee{
+    color:white;
+    display:flex;
+    align-items: center;
+    font-size: 1.2em;
+    color:var(--Light-Gray);
+    font-weight:400 ;
+    padding-bottom: 10px;
+}
+
+p.subscription-fee span{
+    font-size: 2.2em;
+    color:white;
+    margin-right: 15px;
+    
+}
+
+div.second p.details{
+color:white;
+}
+
+button{
+    width:100%;
+    border:none;
+    color:white;
+    background-color: var(--Bright-Yellow);
+    padding:10px;
+    font-size: 1.1em;
+    height:45px;
+    margin-top: 30px;
+    letter-spacing: .1em;
+    border-radius: 7px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    box-shadow: 1px 1px 5px black;
+}
+
+button:hover{
+color:var(--Bright-Yellow);
+background-color: white;
+}
+
+div.third{
+    background-color: var(--Cyan2);
+    color:white;
+    border-radius: 0px 0px 10px 0px;
+}
+
+div.third h2{
+font-size: 20px;
+}
+
+div.third ul{
+    padding: 20px 0 10px 0;
+    color:var(--Light-Gray);
+    line-height: 1.3em;
+}
+
+
+@media screen and (min-width:650px){
+    div.card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.span-2{
+        grid-column: span 2;
+    }
+
+    div.second{
+        border-radius: 0px 0px 0px 10px;
+    }
+}
+
+@media screen and (min-width:900px){
+    div.card-container{
+        width:700px;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    
+    div.card-container > div{
+padding:40px;
+
+    }
+
+    div.span-2{
+        grid-column: span 2;
+        font-size: 1.2em;
+    }
+}
+
