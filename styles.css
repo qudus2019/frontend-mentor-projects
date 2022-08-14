@@ -127,10 +127,10 @@ font-size:1.2em
 
     div.card{
         width:85%;
-        height:205px;
+        height:200px;
     }
  div.card p.card-paragraph{
-font-size:1em; 
+font-size:.9em; 
 }
     div.card.third{
         grid-column: 2/3;
@@ -170,6 +170,7 @@ font-size:1em;
         margin-top: 0;
     }
 }
+
 
 
 
