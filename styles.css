@@ -151,6 +151,7 @@ div.third ul{
 @media screen and (min-width:650px){
     div.card-container{
         grid-template-columns: 1fr 1fr;
+        margin-top: 7%;
     }
 
     div.span-2{
