@@ -167,7 +167,9 @@ font-size:1.2em
     div.card p{
         margin-top: 0;
     }
-}
+div.card p.card-paragraph{
+
+font-size:1.1em;}
 
 
 
