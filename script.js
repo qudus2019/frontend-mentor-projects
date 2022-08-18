@@ -43,7 +43,7 @@ let error_messages = {
 
 
 inputs[0].addEventListener('keyup',function(e){
-    var parent = this.parentElement.parentElement.parentElement;
+    var parent = this.parentElement.parentElement;
     var error_message = parent.querySelector('p').textContent;
     if(this.value.length < 3){
         parent.querySelector('p').textContent = 'First Name can\'t be empty';
@@ -55,7 +55,7 @@ inputs[0].addEventListener('keyup',function(e){
 })
 
 inputs[1].addEventListener('keyup',function(e){
-   var parent = this.parentElement.parentElement.parentElement;
+   var parent = this.parentElement.parentElement;
     if(this.value.length === 0){
         parent.querySelector('p').textContent = 'Last Name can\'t be empty';
     }else if(sub_patterns[this.name][0].test(this.value)){
@@ -66,7 +66,7 @@ inputs[1].addEventListener('keyup',function(e){
 })
 
 inputs[2].addEventListener('keyup',function(e){
-    var parent = this.parentElement.parentElement.parentElement;
+    var parent = this.parentElement.parentElement;
  
     if(!sub_patterns[this.name][0].test(this.value)){
         parent.querySelector('p').textContent  = 'Enter a valid Email Address!';
@@ -76,7 +76,7 @@ inputs[2].addEventListener('keyup',function(e){
 
 inputs.forEach((input)=>{
     input.addEventListener('focus',function(e){
-    input.parentElement.parentElement.parentElement.classList.add('open');
+    input.parentElement.parentElement.classList.add('open');
     })
 
     input.addEventListener('keyup',function(e){
@@ -87,11 +87,11 @@ inputs.forEach((input)=>{
 
 function validate(regex,input){
     if(!regex.test(input.value)){
-        input.parentElement.parentElement.parentElement.classList.add('invalid');        
-        input.parentElement.parentElement.parentElement.classList.remove('open')
+        input.parentElement.parentElement.classList.add('invalid');        
+        input.parentElement.parentElement.classList.remove('open')
     } else{
-        input.parentElement.parentElement.parentElement.classList.remove('invalid');
-        input.parentElement.parentElement.parentElement.classList.add('open');
+        input.parentElement.parentElement.classList.remove('invalid');
+        input.parentElement.parentElement.classList.add('open');
       
     }
 }

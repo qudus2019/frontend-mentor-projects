@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 *{
     padding:0;
     margin:0;
@@ -56,7 +56,7 @@ div.text p{
 }
 
 button{
-    height:60px;
+    height:70px;
     all:unset;
     background-color: var(--Blue);
     border-radius: 7px;
@@ -72,7 +72,7 @@ button span{
 form{
     background-color: white;
     margin-top: 40px;
-    padding:35px;
+    padding:45px;
     border-radius: 10px;
 }
 
@@ -80,21 +80,21 @@ form > div{
     margin-bottom:20px;
 }
 
-form>div.open label div{
+form>div.open label{
     outline-color: var(--Blue);
 }
 
-form>div.invalid label div img{
+form>div.invalid label img{
     display:block;
 }
 form>div.invalid {
     margin-bottom: 0;
 }
-form>div.invalid label div{
+form>div.invalid label{
     outline-color: var(--Red);
 }
 
-form > div.valid label div{
+form > div.valid label{
     outline-color: var(--Dark-Blue);
 }
 
@@ -112,7 +112,7 @@ p.error-message{
 
 
 
-form > div label div{
+form > div label{
     height:50px;
     display:flex;
     justify-content: space-evenly;
@@ -121,7 +121,7 @@ form > div label div{
      border-radius: 5px;
 }
 
-form > div label div img{
+form > div label img{
     margin-right: 20px;
     display: none;
 }
@@ -170,6 +170,7 @@ button{
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
+    font-family: 'Poppins';
 }
 
 input[type='submit']:hover,
