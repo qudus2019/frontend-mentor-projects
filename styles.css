@@ -72,8 +72,8 @@ button span{
 
 form{
     background-color: white;
-    margin-top: 40px;
-    padding:45px;
+    margin-top: 20px;
+    padding:50px;
     border-radius: 10px;
 }
 
@@ -230,6 +230,8 @@ button:hover{
     padding: 25px;
  }
 }
+
+
 
 
 
