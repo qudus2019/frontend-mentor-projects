@@ -1,0 +1,233 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+
+/*### Accent*/
+
+--Blue: hsl(248, 32%, 49%);
+
+/*### Neutral*/
+
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 25%, 77%);
+
+font-size: 16px;
+background: var(--Red) url('images/bg-intro-desktop.png');
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    font-family: 'Poppins',helvetica;
+    padding:7% 9%;
+}
+
+div.text{
+    grid-row: 1/span 2;
+    align-self: center;
+    padding:px;
+}
+
+div.text h1{
+    color:white;
+    font-size: 3.2em;
+}
+
+div.text p{
+    color:white;
+    padding-top: 30px;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+button{
+    height:60px;
+    all:unset;
+    background-color: var(--Blue);
+    border-radius: 7px;
+    padding:15px;
+    color:white;
+    text-align: center;
+}
+
+button span{
+    color:var(--Grayish-Blue)
+}
+
+form{
+    background-color: white;
+    margin-top: 40px;
+    padding:35px;
+    border-radius: 10px;
+}
+
+form > div{
+    margin-bottom:20px;
+}
+
+form>div.open label div{
+    outline-color: var(--Blue);
+}
+
+form>div.invalid label div img{
+    display:block;
+}
+form>div.invalid {
+    margin-bottom: 0;
+}
+form>div.invalid label div{
+    outline-color: var(--Red);
+}
+
+form > div.valid label div{
+    outline-color: var(--Dark-Blue);
+}
+
+form>div.invalid p{
+    display:block;
+    padding: 20px 0;
+}
+
+p.error-message{
+    color:var(--Red);
+    display: none;
+    text-align: right;
+    font-size: .8em;
+}
+
+
+
+form > div label div{
+    height:50px;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    outline:2px solid var(--Grayish-Blue);
+     border-radius: 5px;
+}
+
+form > div label div img{
+    margin-right: 20px;
+    display: none;
+}
+
+input.input-control{
+    border:none;
+height:50%;
+    padding:20px;
+   width:100%;
+   font-size: 1.1em;
+}
+
+input.input-control:focus{
+    outline: none;
+    
+}
+
+input[type='submit']{
+    all:unset;
+    height:50px;
+    background-color: var(--Green);
+    width:100%;
+    border-radius: 5px;
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .1em;
+    
+}
+
+form>p{
+    color:var(--Grayish-Blue);
+    padding:12px;
+    font-size: .7em;
+    text-align: center;
+}
+
+form > p span{
+    color:var(--Red);
+    font-weight: 700;
+}
+
+input[type='submit'],
+button{
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+input[type='submit']:hover,
+button:hover{
+    -webkit-transform:scale(1.04);
+    -moz-transform:scale(1.04);
+    transform:scale(1.04);
+}
+
+@media screen and (max-width:899px){
+   div.text h1{
+        font-size: 2.5em;
+    }
+
+    div.text p{
+        font-size: 1em;
+    }
+
+    main{
+        padding:5% 5%;
+    }
+}
+
+@media screen and (max-width:670px){
+  main{
+    padding: 10% 10%;
+    display:block;
+  }
+}
+@media screen and (max-width:411px){
+  main{
+    padding: 10% 8%;
+    display:block;
+  }
+  button{
+    margin-top: 60px;
+    padding: 10px 50px;
+    line-height: 1.8em;
+ }
+}
+@media screen and (max-width:400px){
+ div.text{
+    text-align: center;
+ }
+ 
+ div.text h1{
+    font-size: 1.7em;
+ }
+
+ div.text p{
+    font-size: 1.1em;
+ }
+
+ 
+ form{
+    padding: 25px;
+ }
+}
+
+
+
