@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
+    font-family: 'Poppins';
 }
 
 body{
@@ -17,7 +18,7 @@ body{
 /*### Neutral*/
 
 --Dark-Blue: hsl(249, 10%, 26%) ;
---Grayish-Blue: hsl(246, 25%, 77%);
+--Grayish-Blue: hsl(246, 23%, 82%);
 
 font-size: 16px;
 background: var(--Red) url('images/bg-intro-desktop.png');
@@ -28,12 +29,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+ 
 }
 main{
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    font-family: 'Poppins',helvetica;
     padding:7% 9%;
 }
 
@@ -56,7 +57,7 @@ div.text p{
 }
 
 button{
-    height:70px;
+    height:220px;
     all:unset;
     background-color: var(--Blue);
     border-radius: 7px;
