@@ -1,83 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
   
-  <title>Frontend Mentor | Intro component with sign up form</title>
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <header>
+    <nav>
+      <img src="images/logo.svg" alt="the logo" class="logo">
+      <img src="images/icon-hamburger.svg" alt="" class="hamburger">
+      <ul class="menu">
+        <li> <a href="#">About</a> </li>
+        <li> <a href="#">Services</a> </li>
+        <li> <a href="#">Projects</a> </li>
+        <li class="contact"> <a href="#">Contact</a> </li>
+      </ul>
+    </nav>
+    
+      <h1 class="main-heading">We are creatives</h1>
+      <div class="arrow-down_wrapper">
+        <img src="images/icon-arrow-down.svg" alt="arrow-down" class="arrow-down">
+      </div>
+      
+    
+  </header>
+
   <main>
-    <div class="text">
-      <h1 id="main-heading"> Learn to code by watching others</h1>
-      <p class="main-paragraph"> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+    <section class="first-section">
+      <h1></h1>
+
+      <div class="transform-your-brand">
+          <div class="transform-your-brand_text">
+        <h2>Transform your brand</h2>
+        <p class="details">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <p class="learn-more"> <a href="#">Learn more</a></p>
+      </div>  
+        <picture>
+          <source srcset="images/mobile/image-transform.jpg" media="(max-width:500px)">
+          <img src="images/desktop/image-transform.jpg" alt="image-transfom" class="desktop">
+        </picture>
+    
+  </div>
+  
+      <div class="stand-out">
+        <div class="stand-out_img">
+          <picture>
+            <source srcset="images/mobile/image-stand-out.jpg"  media="(max-width:500px">
+            <img src="images/desktop/image-stand-out.jpg" alt="" class="desktop">
+          </picture>
+        </div>
+
+        <div class="stand-out_text">
+          <h2>Stand out to the right audience</h2>
+          <p class="details">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <p class="learn-more"> <a href="#">Learn more</a></p>
+        </div>
+
+      </div>
+
+      <div class="graphic-design position-relative">
+        <picture>
+          <source srcset="images/mobile/image-graphic-design.jpg" media="(max-width:500px)">
+          <img src="images/desktop/image-graphic-design.jpg" alt="">
+         </picture>
+         <div>
+         <h3>Graphic Design</h3>
+        <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+      </div>
     </div>
 
-    <button class="try">Try it free 7 days <span>then $20/mo. thereafter</span> </button>
-    
-    <form action="#" name="firstform">
-      <div class="first part">
-      <label for="firstname">
-        
-          <input type="text" name="firstname" placeholder="Firstname" id="firstname" class="input-control">
-          <img src="images/icon-error.svg" alt="error" class="error-icon">
-        
-      </label>
-        <p class="error-message">First Name cannot be empty</p>
+      <div class="photography position-relative">
+       <picture>
+        <source srcset="images/mobile/image-photography.jpg" media="(max-width:500px)">
+        <img src="images/desktop/image-photography.jpg" alt="">
+       </picture>
+
+       <div>
+        <h3>Photography</h3>
+        <p >Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+      </div>
+    </div>
+  
+    </section>
+
+    <section class="client-testimonials">
+      <h3 class="client-testmonials_heading">Client testimonials</h3>
+      <div class="emily">
+        <img src="images/image-emily.jpg" alt="emily avatar">
+        <blockquote>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</blockquote>
+        <div class="name-and-position">
+          <p class="name">Emily R.</p>
+          <p class="position">Marketing Director</p>
+        </div>
       </div>
 
-      <div class="second part">
-      <label for="lastname">
-        
-          <input type="text" name="lastname" placeholder="Last Name" id="lastname" class="input-control">
-          <img src="images/icon-error.svg" alt="error" class="error-icon">
-        
-      </label>
-        <p class="error-message">Last name cannot be empty</p>
+      <div class="thomas">
+        <img src="images/image-thomas.jpg" alt="thomas avatar">
+        <blockquote>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</blockquote>
+        <div class="name-and-position">
+          <p class="name">Thomas S.</p>
+          <p class="position">Chief Operating Officer</p>
+        </div>
       </div>
 
-      <div class="third part">
-      <label for="email">
-        
-          <input type="email" name="email" placeholder="Email Address" class="input-control" id="email">
-          <img src="images/icon-error.svg" alt="error" class="error-icon">
-        
-      </label>
-        <p class="error-message">Email cannot be empty !</p>
+      <div class="jennie">
+        <img src="images/image-jennie.jpg" alt="jennie avatar">
+        <blockquote> Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</blockquote>
+        <div class="name-and-position">
+          <p class="name">Jennie F.</p>
+          <p class="position">Business Owner</p>
+        </div>
       </div>
 
-      <div class="fourth part">
-      <label for="password">
-        
-          <input type="password" name="password" placeholder="Password" class="input-control" id="password">
-          <img src="images/icon-error.svg" alt="error" class="error-icon">
-        
-      </label>
-        <p class="error-message">Password cannot be empty</p>
-      </div>
-      <input type="submit" name="submit" value="Claim your free trial ">
-      </label>
-      <p class="terms-and-condition">  By clicking the button, you are agreeing to our <span>Terms and Services</span> </p>
-    </form>
-    
-    
-  </main>  
+    </section>
+
+    <section class="image-gallery">
+      <h1></h1>
+      <picture>
+        <source srcset="images/mobile/image-gallery-milkbottles.jpg" media="(max-width:500px">
+        <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" class="desktop">
+      </picture>
+
+      <picture>
+        <source srcset="images/mobile/image-gallery-orange.jpg" media="(max-width:500px">
+        <img src="images/desktop/image-gallery-orange.jpg" alt="" class="desktop">
+      </picture>
+
+      <picture>
+        <source srcset="images/mobile/image-gallery-cone.jpg" media="(max-width:500px">
+        <img src="images/desktop/image-gallery-cone.jpg" alt="" class="desktop">
+      </picture>
+
+      <picture>
+        <source srcset="images/mobile/image-gallery-sugar-cubes.jpg" media="(max-width:500px">
+        <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="" class="desktop">
+      </picture>
+    </section>
+  </main>
+
+<footer>
+  <h3 class="logo">sunnyside</h3>
+  <ul class="footer_navlinks">
+    <li> <a href="#">About</a> </li>
+    <li> <a href="#">Services</a> </li>
+    <li> <a href="#">Projects</a> </li>
+  </ul>
+
+  <ul class="footer_socials">
+    <li> <a href="#"><img src="images/icon-facebook.svg" alt="facebook icon"></a> </li>
+    <li> <a href="#"><img src="images/icon-instagram.svg" alt="instagram icon"></a> </li>
+    <li> <a href="#"><img src="images/icon-twitter.svg" alt="twitter icon"></a> </li>
+    <li> <a href="#"><img src="images/icon-pinterest.svg" alt="pintrest icon"></a> </li>
+  </ul>
+</footer>
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-
-  <script src="script.js"></script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdulqudus Sanusi</a>.
+  </div></footer>
 </body>
 </html>
