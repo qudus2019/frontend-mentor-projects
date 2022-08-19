@@ -11,6 +11,7 @@
 
 h1,h2,h3,p.name,p.learn-more a{
     font-family: 'Fraunces';
+    font-weight:900;
 }
 body{
   /*  ### Primary*/
@@ -35,7 +36,7 @@ font-family: helvetica;
 }
 
 header{
-    height:100vh;
+    height:95vh;
     background: url('images/desktop/image-header.jpg') no-repeat center;
     background-size: cover;
     background-position: center;
