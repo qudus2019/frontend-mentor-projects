@@ -1,550 +1,235 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 *{
     padding:0;
     margin:0;
-    list-style-type: none;
-    text-decoration: none;
-    box-sizing: border-box;
-    font-family: 'Barlow';
+    box-sizing:border-box;
+    font-family: 'Poppins';
 }
 
-h1,h2,h3,p.name,p.learn-more a{
-    font-family: 'Fraunces';
-}
 body{
-  /*  ### Primary*/
 
---Soft-red: hsl(7, 99%, 70%);
---light-Soft-red: hsl(7, 97%, 85%);
---Yellow: hsl(51, 100%, 49%);
---lightYellow: hsl(51, 88%, 81%);
---graphic-design-text: hsl(167, 40%, 24%);
---photography-text: hsl(198, 62%, 26%);
---footer: hsl(168, 34%, 41%);
---footerbg: hsl(168, 55%, 74%);
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+
+/*### Accent*/
+
+--Blue: hsl(248, 32%, 49%);
+
 /*### Neutral*/
 
---Very-dark-desaturated-blue: hsl(212, 27%, 19%);
---Very-dark-grayish-blue: hsl(213, 9%, 39%);
---Dark-grayish-blue: hsl(232, 10%, 55%);
---Grayish-blue: hsl(210, 4%, 67%);
---White: hsl(0, 0%, 100%);
-font-size: 18px;
-font-family: helvetica;
-}
+--Dark-Blue: hsl(249, 10%, 26%) ;
+--Grayish-Blue: hsl(246, 23%, 82%);
 
-header{
-    height:90vh;
-    background: url('images/desktop/image-header.jpg') no-repeat center;
-    background-size: cover;
-    background-position: center;
+font-size: 16px;
+background: var(--Red) url('images/bg-intro-desktop.png');
+
+}
+body{
     display: flex;
     flex-direction: column;
-
-    padding:50px;
-}
-
-header img.hamburger{
-    display:none;
-}
-
-nav{
-    width:100%;
-    height:fit-content;
-    display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 100px;
+ 
 }
-
-nav img.logo{
-    width:150px;
-}
-
-nav ul.menu{
-   
-    display:flex;
-    
-}
-
-nav ul.menu li a{
-    color:white;
-    margin-left: 30px;
-}
-
-nav ul.menu li.contact a {
-    background-color: var(--White);
-    padding:15px 30px;
-    font-size: 15px;
-    color:black;
-    text-transform: uppercase;
-    border-radius: 30px;
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-nav ul.menu li.contact a:hover{
-    color:white;
-    background-color: var(--Very-dark-desaturated-blue);
-}
-
-header h1.main-heading{
-    color:var(--White);
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3em;
-    letter-spacing: .1em;
-
-}
-
-header div.arrow-down_wrapper{
-    width:70px;
-    height:150px;
-    align-self: center;
-    margin-top: 80px;
-}
-
-header img.arrow-down{
-    max-width: 100%;
-    max-height: 100%;
-}
-section{
-    display: grid;
-}
-section.first-section{
-    
-    grid-template-columns: 1fr 1fr ;
-}
-
-div.transform-your-brand,
-div.stand-out{
-    grid-column: span 2;
-    width:100%;
+main{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    padding:7% 9%;
 }
 
-div.transform-your-brand_text,
-div.stand-out_text{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding:40px 110px;
+div.text{
+    grid-row: 1/span 2;
+    align-self: center;
+    padding:px;
 }
 
-div h2{
-    font-size: 2.9em;
-    padding-bottom: 40px;
+div.text h1{
+    color:white;
+    font-size: 3.2em;
 }
 
-div p.details {
-    color:var(--Dark-grayish-blue);
+div.text p{
+    color:white;
+    padding-top: 30px;
+    font-size: 1.1em;
     line-height: 1.5em;
 }
 
-
-div p.learn-more {
-    align-self: flex-start;
-    padding-top: 60px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    border-bottom: 4px solid var(--lightYellow);
-}
-
-div.stand-out_text p.learn-more a{
-    border-bottom: 4px solid var(--light-Soft-red);
-}
-
-div.stand-out_text p.learn-more:hover a{
-    border-bottom: 4px solid var(--Soft-red);
-}
-
-
-div.transform-your-brand_text p.learn-more{
-    border-bottom: 4px solid var(--lightYellow);
-}
-div.transform-your-brand_text p.learn-more:hover{
-    border-bottom-color: var(--Yellow);
-}
-
-div.position-relative{
-    position: relative;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-div.position-relative div{
-    position: absolute;
-    bottom:12%;
+button{
+    height:220px;
+    all:unset;
+    background-color: var(--Blue);
+    border-radius: 7px;
+    padding:15px;
+    color:white;
     text-align: center;
-    width:58%;
-}
-div.position-relative div h3{
-    padding-bottom: 30px;
-    font-size: 1.5em;
 }
 
-div.position-relative div p{
-   line-height: 1.5em;
+button span{
+    color:var(--Grayish-Blue)
 }
 
-div.photography div {
-color:var(--photography-text);
+form{
+    background-color: white;
+    margin-top: 40px;
+    padding:45px;
+    border-radius: 10px;
 }
 
-div.graphic-design div{
-    color:var(--graphic-design-text);
+form > div{
+    margin-bottom:20px;
 }
 
-div p.learn-more a{
-    color:black;
+form>div.open label{
+    outline-color: var(--Blue);
 }
 
-
-section.client-testimonials{
-    display:grid;
-    gap: 30px;
-    grid-row-gap: 80px;
-    grid-template-columns: 1fr 1fr 1fr ;
-    padding:10% 10%;
-    
-
+form>div.invalid label img{
+    display:block;
+}
+form>div.invalid {
+    margin-bottom: 0;
+}
+form>div.invalid label{
+    outline-color: var(--Red);
 }
 
-section.client-testimonials h3{
-    grid-column: span 3;
-    text-transform: uppercase;
-    text-align: center;
-  
-    color:var(--Dark-grayish-blue);
-    letter-spacing: .15em;
+form > div.valid label{
+    outline-color: var(--Dark-Blue);
 }
 
-section.client-testimonials div{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+form>div.invalid p{
+    display:block;
+    padding: 20px 0;
 }
 
-section.client-testimonials div img{
-    width:70px;
-    border-radius: 50%;
-}
-
-section.client-testimonials div blockquote{
-    padding-top: 60px;
-    line-height: 1.5em;
-    text-align: center;
-    color:var(--Dark-grayish-blue);
-}
-
-section.client-testimonials div div.name-and-position{
-    padding-top: 80px;
-}
-
-p.name{
-    font-weight: ;
-}
-
-p.position{
+p.error-message{
+    color:var(--Red);
+    display: none;
+    text-align: right;
     font-size: .8em;
-    line-height: 3em;
-    color:var(--Grayish-blue)
 }
 
 
-picture source, picture img{
-    max-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-}
 
-section.image-gallery{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-footer{
-    background-color: var(--footerbg);
+form > div label{
+    height:50px;
     display:flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    padding:40px 0
-
+    outline:2px solid var(--Grayish-Blue);
+     border-radius: 5px;
 }
 
-footer h3.logo{
-    color:var(--footer);
-    font-size: 2em;
-    padding:40px;
+form > div label img{
+    margin-right: 20px;
+    display: none;
 }
 
-footer ul{
-    display:flex;
-
-}
-
-footer ul li a{
-    color:var(--footer)
-}
-
-footer ul.footer_socials{
-    padding-top: 80px;
-   
-}
-
-footer ul.footer_socials li{
-     margin-left: 30px;
-}
-
-footer ul.footer_navlinks li{
-     margin-left: 60px;
-}
-
-ul li a{
-    -webkit-transition: all .4s ease-in;
-    -moz-transition: all .4s ease-in;
-    transition: all .4s ease-in;
-}
-ul li:hover a{
-color:white;
-border-bottom: 4px solid white;
-}
-
-@media screen and (min-width:760px) and (max-width:1024px){
-    
-header{
-    max-height:75vh;
-}
-
-div.transform-your-brand_text,
-div.stand-out_text{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding:50px 60px;
-}
-div h2{
-    font-size: 1.7em;
-    padding-bottom: 40px;
-}
-
-
-
-div.position-relative div{
-    position: absolute;
-    bottom:5%;
-    text-align: center;
-    width:70%;
-    padding: 30px 0;
-}
-
-div.position-relative div p{
-    font-size: .9em;
-}
-
-div.position-relative div h3{
-    font-size: 1.6em;
-    padding-bottom: 15px;
-}
-
-section.client-testimonials{
-    grid-template-columns: 1fr 1fr;
-    
-}
-section.client-testimonials h3{
-    grid-column: span 2;
-}
-
-section.image-gallery{
-    grid-template-columns: 1fr 1fr;
-}
-
-
-}
-
-/*mobile design starts here*/
-
-@media screen and (max-width:450px){
-
-header{
-    position: relative;
-    height:65vh;
-    padding:25px;
-    background-image: url('images/mobile/image-header.jpg');
-}
-
-header div.arrow-down_wrapper{
-    margin-top: 5%;
-    margin-left: 30px;
-}
-
-    header img.hamburger{
-        display:block;
-
-    }
-
-    header nav ul.menu{
-        position: absolute;
-        margin:0 auto;
-        background-color: var(--White);
-        color:var(--Dark-grayish-blue);
-         left:20px;
-        top:140px;
-        width:88%;
-        height:350px;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        padding:30px 0;
-        opacity :0;
-       -webkit-transition: opacity .5s ease-in-out;
-        -moz-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
-
-    }
-
-    div.transform-your-brand_text,
-div.stand-out_text{
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    ul.show{
-        display:flex;
-    }
-
-    nav ul.menu::before{
-        content:'';
-        top:-30px;
-        right:0;
-        background-color: white;
-        position: absolute;
-        width:20px;
-        height:50px;
-        transform:SkewY(-70deg);
-    }
-
-    
-
-    nav ul.menu li a{
-        color:var(--Dark-grayish-blue);
-        margin: 0;
-    }
-    
-    nav ul.menu li.contact a {
-        background-color: var(--Yellow);
-      
-        color:white;
-       
-    }
-    
-    nav ul.menu li.contact a:hover{
-        color:black;
-        background-color: var(--lightYellow);
-    }
-    
-    header h1.main-heading{
-        color:var(--White);
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 2em;
-        letter-spacing: .1em;
-    
-    }
-
-    section.client-testimonials,
-    section.first-section{
-        display: block;
-       
-    }
-
-
-    section.image-gallery{
-        grid-template-columns: 1fr 1fr;
-    }
-
-    div.transform-your-brand,
-div.stand-out{
-    grid-template-columns: 1fr;
-}
-
-    div.transform-your-brand_text,
-div.stand-out_text{
-    padding:40px 30px;
-    text-align: center;
-}
-
-div h2{
-    font-size: 1.9em;
-    padding-bottom: 40px;
-}
-
-div p.learn-more{
-    align-self: center;
-}
-
-section.first-section div.transform-your-brand,
-div.stand-out
-{
-    display:flex;
-    flex-direction: column-reverse;
-}
-
-div.stand-out{
-flex-direction: column;
-}
-
-div.position-relative > div{
-    width:100%;
-    font-size: .9em;
+input.input-control{
+    border:none;
+height:50%;
     padding:20px;
+   width:100%;
+   font-size: 1.1em;
 }
 
-section.client-testimonials {
-    font-size: .9em;
+input.input-control:focus{
+    outline: none;
+    
 }
 
-section.client-testimonials h3{
-    padding-bottom: 50px;
+input[type='submit']{
+    all:unset;
+    height:50px;
+    background-color: var(--Green);
+    width:100%;
+    border-radius: 5px;
+    text-align: center;
+    color:white;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .1em;
+    
 }
 
-section.client-testimonials div blockquote{
-    padding-top: 20px;
+form>p{
+    color:var(--Grayish-Blue);
+    padding:12px;
+    font-size: .7em;
+    text-align: center;
+}
+
+form > p span{
+    color:var(--Red);
+    font-weight: 700;
+}
+
+input[type='submit'],
+button{
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    font-family: 'Poppins';
+}
+
+input[type='submit']:hover,
+button:hover{
+    -webkit-transform:scale(1.04);
+    -moz-transform:scale(1.04);
+    transform:scale(1.04);
+}
+
+@media screen and (max-width:899px){
+   div.text h1{
+        font-size: 2.5em;
+    }
+
+    div.text p{
+        font-size: 1em;
+    }
+
+    main{
+        padding:5% 5%;
+    }
+}
+
+@media screen and (max-width:670px){
+  main{
+    padding: 10% 10%;
+    display:block;
+  }
+}
+@media screen and (max-width:411px){
+  main{
+    padding: 10% 8%;
+    display:block;
+  }
+  button{
+    margin-top: 60px;
+    padding: 10px 50px;
+    line-height: 1.8em;
+ }
+}
+@media screen and (max-width:400px){
+ div.text{
+    text-align: center;
+ }
+ 
+ div.text h1{
+    font-size: 1.7em;
+ }
+
+ div.text p{
+    font-size: 1.1em;
+ }
+
+ 
+ form{
+    padding: 25px;
+ }
 }
 
 
-section.client-testimonials div div.name-and-position{
-    padding:30px 0 60px 0;
-}
 
-footer ul.footer_socials{
-    padding-top: 80px;
-   
-}
-
-footer ul.footer_socials li{
-     margin-left: 30px;
-}
-
-footer ul.footer_navlinks{
-  align-self: flex-start;
-  width:100%;
-  justify-content: space-evenly;
-}
-footer ul.footer_navlinks li  {
-  margin-left: 0;
-}
-
-
-
-
-
-}
