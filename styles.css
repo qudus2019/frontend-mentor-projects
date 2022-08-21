@@ -29,6 +29,7 @@ main{
     display:grid;
     gap:20px;
     width:320px;
+    max-width:90vw;
 }
 
 main > div{
