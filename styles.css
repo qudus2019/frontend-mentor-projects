@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    list-style-type: none;
+}
+
+body{
+    font-size:14px;
+    font-family: 'Raleway', helvetica;
+    background: url('images/bg-mobile.png') repeat-y scroll center;
+    background-size: cover;
+
+    --Gradient: to right, hsl(6, 100%, 80%) ,hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+
+main{
+    display:grid;
+    gap:20px;
+    width:320px;
+}
+
+main > div{
+    background:var(--Dark-Blue) ;
+}
+
+main div.first{
+    
+    border-radius: 10px 100px 10px 10px;
+    padding:40px 50px 40px 40px;
+}
+
+div.icons{
+    display:flex;
+    padding:30px 60px 0 0 ;
+}
+div.icons > div:hover img{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+div.icons > div{
+    width:50px;
+    height: 50px;
+    padding:13px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    display:flex;
+    margin-right: 15px;
+    justify-content:center;
+    align-items:center;
+}
+
+div.second{
+    border-radius: 10px;
+    height:fit-content;
+    padding: 35px 40px ;
+    position: relative;
+}
+
+div.second p.main-paragraph{
+    color:var(--Pale-Blue);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+div.second p.main-paragraph span{
+    color:white;
+}
+
+p.main-paragraph span,
+div.start-and-end{
+    font-weight: 700;
+}
+
+div.fill{
+    width:100%;
+    height:20px;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    padding:3px;
+    display:flex;
+}
+
+div.fill div.filledup{
+    width:75.5%;
+    height:100%;
+    background-image: linear-gradient(var(--Gradient));
+    border-radius: 8px ;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2px;
+    -webkit-animation: width 3s ease-in 0.5s ;
+    -moz-animation: width 3s ease-in 0.5s ;
+    animation: width 3s ease-in 0.5s ;
+}
+
+@keyframes width{
+
+    0%{
+        width:0%;
+    }
+
+    100%{
+        width:75.5%;
+    }
+
+}
+
+div.round{
+    background-color: white;
+    width:11px;
+    height:80%;
+    border-radius: 50%;
+}
+
+
+div.start-and-end{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+      color:white;
+}
+
+h1{
+  background-color: white;
+  width:fit-content;
+  height:70px;
+  padding:20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -45px;
+  left:23%;
+  font-size: 2.5em;
+
+}
+
+h1 span.gb{
+    color:var(--Grayish-Blue);
+    margin-left: 10px;
+    font-size: .35em;
+    text-transform: uppercase;
+
+}
+
+
+
+@media screen and (min-width:700px){
+    main{
+        width:400px;
+     
+    }
+
+    h1{
+        left:30%;
+    }
+}
+@media screen and (min-width:1100px){
+    main{
+        width:1000px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+     
+    }
+
+
+    div.first{
+        width:350px;
+    }
+
+    div.second{
+        width:540px;
+        margin-top: 55px; 
+        padding-bottom: 15px;   
+    }
+
+    div.second p.main-paragraph{
+        text-align: left;
+    }
+
+    h1{
+        left: 58%;
+        top:-32%;
+        width:180px;
+    }
+
+    h1:before{
+        content:'';
+        position: absolute;
+        width:30px;
+        height:30px;
+        background-color:inherit;
+        right:0;
+        bottom:-5%;
+        -webkit-transform: skewY(50deg);
+        -moz-transform: skewY(50deg);
+        transform: skewY(50deg);
+    }
+
+    body{
+        background: var(--Very-Dark-Blue) url('images/bg-desktop.png') no-repeat;
+        background-size: contain;
+        background-position-y:50vh ;
+    }
+
+}
+
+
+
+
