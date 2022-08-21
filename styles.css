@@ -182,13 +182,13 @@ h1 span.gb{
 
 
     div.first{
-        width:350px;
+        width:330px;
     }
 
     div.second{
         width:540px;
-        margin-top: 55px; 
-        padding-bottom: 15px;   
+        margin-top: 47px; 
+       padding-bottom: 30px;  
     }
 
     div.second p.main-paragraph{
