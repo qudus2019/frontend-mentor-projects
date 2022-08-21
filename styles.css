@@ -29,7 +29,6 @@ main{
     display:grid;
     gap:20px;
     width:320px;
-    max-width:90vw;
 }
 
 main > div{
@@ -165,6 +164,7 @@ h1 span.gb{
 @media screen and (min-width:700px){
     main{
         width:400px;
+        max-width:90vw;
      
     }
 
