@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+:root{
+
+--Moderate-cyan: hsl(176, 50%, 47%);
+--Dark-cyan: hsl(176, 72%, 28%);
+
+--Black: hsl(0, 0%, 0%);
+--Dark-gray: hsl(0, 8%, 97%);
+--dDark-gray: hsl(0, 0%, 48%);
+font-family: 'Commissioner', helvetica;
+scroll-behavior: smooth;
+}
+
+*{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    utline:1px solid green;
+    transition:all 1s;
+}
+body{
+    background: var(--Dark-gray);
+    cursor:pointer;
+}
+body::before{
+    position:absolute;
+    content:'';
+    top:0;
+    right:0;
+    width:100%;
+    height:300px;
+    background: url('images/image-hero-desktop.jpg') no-repeat scroll center top;
+  
+    background-size: cover;
+    z-index: -1;
+}
+
+header.display_flex{
+    display:flex;
+    justify-content:space-between;
+    padding:40px 10%;
+    position:relative;
+}
+
+img.icon-hamburger{
+    display:none;
+    width:30px;
+    height:20px;
+}
+
+.display_flex{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+ul{
+    display:flex;
+}
+
+ul.nav-menu li{
+    margin-left: 30px;
+}
+
+a{
+    color:white;
+}
+
+li a:hover{
+  background: var(--Moderate-cyan);
+  border-radius: 30px;
+  padding:10px ;
+}
+
+.container{
+    width:750px;
+    max-width: 80vw;
+    margin:10% auto;
+    display:flex;
+    flex-direction: column;
+}
+
+div.sections{
+    display:grid;
+    gap:20px;
+}
+
+section{
+    background: white;
+    border-radius: 5px;
+    padding:40px;
+}
+.position_relative{
+    position:relative;
+}
+.position_absolute{
+    position: absolute;
+    top:-30px;
+    left:45%;
+}
+.header{
+    justify-content: space-between;
+}
+
+.header h1.title,
+.header p.description{
+    width:100%;
+    text-align: center;
+    padding-top:   15px;
+}
+
+.description{
+    color:var(--dDark-gray);
+}
+
+.btn{
+  all:unset;
+    padding:20px;
+    border-radius: 60px;
+    color:white;
+}
+
+.back-this-project{
+    background: var(--Moderate-cyan);
+    width:fit-content;
+    height:fit-content;
+    padding:17px 35px;
+    margin-top: 40px;
+}
+
+.back-this-project:hover{
+    background-color: var(--Dark-cyan);
+
+}
+
+div#bookmark{
+    display:flex;
+    align-items: center;
+    margin-top: 40px;
+    background: var(--Dark-gray);
+    outline:none;
+    border-radius: 60px;
+}
+
+div#bookmark div:hover{
+    -webkit-animation: bounce 2s linear .1s infinite ;
+    -moz-animation: bounce 2s linear .1s infinite ;
+    animation: bounce 2s linear .1s infinite ;
+}
+    @keyframes bounce {
+        50%{
+            -webkit-transform:translateY(20px);
+            -moz-transform:translateY(20px);
+            transform:translateY(20px)
+        }
+        100%{
+            -webkit-transform:translateY(-20px);
+            -moz-transform:translateY(-20px);
+            transform:translateY(-20px)
+        }
+    }
+ 
+
+#bookmark p{
+    padding:10px 20px 10px 10px;
+    font-weight: bold;
+   
+    color:var(--dDark-gray);
+}
+
+#bookmark p.bookmarked{color:var(--Moderate-cyan)}
+
+section.progress-section{
+    gap:20px;
+}
+
+div.progress{
+    width:calc((100% - 80px)/3);
+    padding-left:10px;
+}
+
+div.progress:not(:first-child){
+    border-left: 1px solid silver;
+    text-align: center;
+}
+
+p.top{
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+p.out-of{
+    font-weight: 500;
+    color:silver;
+}
+
+div.progress-bar{
+    width:100%;
+    height:12px;
+    background: var(--Dark-gray);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 20px;
+    
+}
+
+
+
+div.progress-bar:before{
+    position:absolute;
+    content:'';
+    top:0;
+    left:0;
+    height:100%;
+    background: var(--Dark-cyan);
+    width:80%;
+    border-radius: 10px;
+    -webkit-animation:run 6s linear .5s ;
+    -moz-animation:run 6s linear .5s ;
+    animation:run 6s linear .5s ;
+}
+
+@keyframes run{
+    0%{
+        width:0;
+    }
+    100%{
+        width:80%;
+    }
+}
+
+section.about h2{
+padding-bottom: 40px;
+}
+
+section.about p{
+    line-height: 30px;
+    font-weight: bold;;
+}
+
+div.card{
+    margin-top: 30px;
+    outline:2px solid silver;
+    padding: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+div.card:hover{
+    outline-color:var(--Moderate-cyan);
+}
+
+div.title-div{
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    width:100%;
+}
+
+div.title-div h3{
+    font-weight: bold;
+}
+
+div.title-div h3:hover{
+    color:var(--Moderate-cyan);
+}
+
+p.info{
+    color:var(--Dark-cyan)
+}
+
+button.select{
+    background: var(--Dark-cyan);
+    color:white;
+    height:fit-content;
+    width:150px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 40px;
+    border:none
+}
+
+button.select:hover{
+background-color: var(--Moderate-cyan);
+}
+
+p.left{
+    font-size: 28px;
+    padding-top: 15px;
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+p.left span{
+    font-size: 16px;
+    color:silver;
+}
+
+button.select{
+
+    margin-top: 30px;
+}
+
+div.disabled{
+    opacity: .5;
+}
+
+div.disabled button{
+    background: var(--dDark-gray);
+}
+
+div.disabled button:hover{
+    background: var(--dDark-gray);
+}
+
+/* modal default styling*/
+
+div.modal{
+    
+    position: relative;
+    width:750px;
+    max-width: 80vw;
+    margin: 0px auto;
+    padding:40px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+img#close-modal{
+    position: absolute;
+    top:30px;
+    right:30px;
+    cursor:pointer;
+    transition:all .2s linear;
+}
+
+img#close-modal:hover{
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+div.selected-pledge{
+    display:none;
+}
+
+div.one > p{
+    padding-left: 30px;
+}
+
+input[type='radio']{
+    float: left;
+    margin-top: 4px;
+    accent-color: var(--Dark-cyan);
+    width:20px;
+    height:20px;
+}
+
+div.modal div.card{
+display:block;
+padding:20px;
+}
+
+div.second{
+    padding-left: 40px;
+}
+
+div.selected > div.three{
+    display:flex;
+}
+
+div.three{
+    display:none;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid silver;
+    padding: 20px 0 0 0;
+}
+.label-control > input{
+   padding:5px;
+}
+
+div.amt{
+    width:fit-content;
+    height:100%;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid silver;
+    border-radius: 50px;
+    padding: 10px 0 10px 20px;
+    
+}
+
+div.amt:hover{
+    border-color: var(--Moderate-cyan);
+}
+
+.input-control,#pledge-amt{
+    padding:0 5px;
+    border:none
+}
+
+.input-control{
+   padding:10px;
+font-size: medium;
+}
+#pledge-amt{
+    background: inherit;
+    font-weight: bold;
+}
+
+#pledge-amt:focus,
+.input-control:focus{
+    outline:none;
+}
+div.amt span{
+    font-weight: bold;
+    color:silver;
+    font-size: small;
+}
+div.wrap-btns{
+    gap:10px;
+}
+div.wrap-btns button{
+    all:unset;
+    padding:10px 15px;
+    border-right: 40px;
+    background-color: var(--Dark-cyan);
+    border-radius: 40px;
+    color:white;
+    font-size: small;
+}
+
+div.wrap-btns button:hover{
+    background-color: var(--Moderate-cyan);
+}
+h4{
+    display: flex;
+    gap:15px;
+    align-items: center;
+}
+
+h4 > span{
+    color:var(--Moderate-cyan);
+    font-size: 14px;
+}
+
+.label-control{
+    display:flex;
+    justify-content: space-between;
+}
+.label-control p {
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    gap:8px;
+}
+
+.label-control p span{
+    font-size:small ;
+    color:silver;
+}
+
+div.selected{
+    outline:2px solid var(--Moderate-cyan);
+}
+
+div.success-modal{
+  
+    width:400px;
+    height: fit-content;
+    max-width: 80vw;
+    margin:30px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding:40px;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.success-modal > img{
+    padding-bottom: 30px;
+}
+
+.success-modal h2{
+    padding-bottom: 30px;
+}
+
+.success-modal p{
+    line-height: 30px;
+}
+
+.success-modal button{
+    background-color: var(--Moderate-cyan);
+    padding:10px;
+    background: var(--Moderate-cyan);
+    border:none;
+    width:100px;
+    height:50px;
+    color:white;
+    border-radius: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+
+}
+
+.success-modal button:hover{
+    background-color: var(--Dark-cyan);
+}
+
+div.container > *{
+   position:absolute;
+}
+
+div.container{
+    position:relative;
+}
+
+div.modals-container{
+   display:none;
+   justify-content: center;
+   align-items: center;
+   margin-top: 400px;
+}
+
+
+div.modals-container.flex{
+    display:flex;
+}
+
+
+div.modals-container > *{
+    position:absolute;
+    top:1000px;
+}
+
+div.success-modal{
+    display:none;
+}
+
+@media screen and (max-width:700px){
+    div.three{
+        flex-direction: column;
+        gap:20px;
+    }
+
+    div.wrap-btns{
+        width:100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:626px){
+    div.progress p.top{
+        font-size: 1.5rem;
+    }
+
+    div.progress p.out-of{
+        font-size: small;
+    }
+
+    body{
+        font-size: rem;
+    }
+
+    h1.title{
+        font-size: 1.8rem;
+    }
+
+    .back-this-project{
+       
+        padding:17px 15px;
+        margin-top:30px ;
+     
+    }
+
+    div#bookmark{
+        margin-top:30px ;
+    }
+
+    div#bookmark img{
+     
+        width:50px;
+    }
+    
+    #bookmark p{
+        padding:8px 20px 8px 10px;
+        font-weight: bold;
+        color:var(--dDark-gray);
+    }
+
+   section.progress-section{
+    justify-content: space-between;
+   }
+
+   p.left{
+    margin-top: 15px;
+   }
+
+   div.success-modal{
+    padding:20px;
+   }
+
+   div.success-modal h2{
+    padding-bottom: 20px;
+    font-size: large;
+   }
+
+   div.success-modal p{
+    font-size: .8rem;
+   }
+}
+
+@media  screen and (max-width:535px) {
+    div.container{
+        top:80px
+    }
+    body::before{
+       
+    }
+    img.icon-hamburger{
+        display:block;
+    }
+
+    ul.nav-menu{
+        position:absolute;
+        flex-direction: column;
+        background: white;
+        width:82.7%;
+        top:105%;
+        right:8.7%;
+        z-index: 2;
+        border-radius: 10px;
+        display:none
+    }
+
+    ul.nav-menu li{
+        margin-left: 0;
+        padding:20px;
+    }
+
+    ul li:not(:first-child){
+        border-top: 1px solid silver;
+    }
+
+    a{
+        color:black;
+        font-size: larger;
+        font-weight: bold;
+        margin-left:0;
+    }
+
+    a:hover{
+        background: none;
+    }
+
+    h1.title{
+        font-size: larger;
+    }
+
+    div#bookmark p{
+        display:none;
+    }
+
+    .back-this-project{
+        width:60%;
+        text-align: center;
+    }
+
+    section.progress-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:0;
+    }
+
+    div.progress{
+        width:100%;
+        text-align: center;
+        padding: 20px 0;;
+    }
+
+
+
+    div.progress:not(:first-child){
+        border-left: none;
+        text-align: center;
+    }
+
+    div.progress p.top{
+        font-size: 2rem;
+    }
+
+    div.progress p.out-of{
+        font-size: small;
+    }
+
+    div.progress:not(:nth-child(3)){
+        border-bottom: 1px solid silver;
+
+    }
+
+   p.left{
+    width:100%;
+   }
+
+   h4{
+    flex-direction: column;
+    align-items: flex-start;
+   }
+
+   h4 ~ p {
+    
+    position:absolute;
+    bottom:0px;
+    font-size: 1.5rem;
+
+   }
+
+   .success-modal p{
+    line-height: 24px;
+}
+}
+
+@media screen and (max-width:462px) {
+    .continer{
+        max-width: 100vw;
+    }
+   section{
+        padding:30px 25px;
+    }
+
+    div.modal{
+        padding:25px;
+    }
+
+    div.card{
+        padding:25px 20px;
+    }
+
+    .position_absolute{
+        position: absolute;
+        top:-30px;
+        left:40%;
+    }
+
+    div.second{
+        padding-left: 10px;
+    }
+div.one input{
+    margin-right:10px ;
+}
+
+div.three div.enter-pledge label > .input-control{
+    width: 100%;
+}
+
+h4{
+    gap:5px;
+}
+}
