@@ -22,9 +22,9 @@
     <img src="images/logo.svg" alt="logo">
     <nav>
       <ul class="nav-menu display_flex">
-        <li> <a href="#">About</a> </li>
+        <li> <a href="#about">About</a> </li>
         <li> <a href="#">Discover</a> </li>
-        <li> <a href="#">Get Started</a> </li>
+        <li> <a href="#modal">Get Started</a> </li>
       </ul>
     </nav>
     <img src="images/icon-hamburger.svg" alt="hamburger" class="icon-hamburger">
@@ -74,7 +74,7 @@
        <!--Progress section ends here-->
 
         <!--About section starts here-->
-      <section class="about">
+      <section class="about" id="about">
         <h2>About this project</h2>
         <p class="description">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p><br><br>
         <p class="description">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer to allow notepads, pens, and USB sticks to be stored under the stand.</p>
@@ -122,11 +122,11 @@
   <!-- Selection modal start -->
   <div class="modals-container" id="modals_container">
   
-  <div class="modal">
+  <div class="modal" id="modal">
     <img src="images/icon-close-modal.svg" alt="close icon" id="close-modal">
       <h3 class='title'> Back this project</h3><br>
       <p class="description">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-        <form action="#">
+        <form action="#" name="main-form">
 
           <div class="card no-pledge">
             <div class="one">
@@ -280,10 +280,10 @@
     <img src="images/icon-check.svg" alt="check">
     <h2 class="thanks">Thanks for your support!</h2>
     <p class="description">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
-    <button class="back" type="button">Got it!</button>
-  </div>
+    <button class="back" type="submit">Got it!</button>
   
 </div>
+
  
 </main>
   <footer></footer>

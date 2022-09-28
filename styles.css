@@ -245,6 +245,7 @@ div.card{
     outline:2px solid silver;
     padding: 30px;
     border-radius: 8px;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -378,7 +379,6 @@ div.selected > div.three{
 
 div.three{
     display:none;
-    
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid silver;
@@ -608,6 +608,19 @@ div.success-modal{
    p.left{
     margin-top: 15px;
    }
+
+   div.success-modal{
+    padding:20px;
+   }
+
+   div.success-modal h2{
+    padding-bottom: 20px;
+    font-size: large;
+   }
+
+   div.success-modal p{
+    font-size: .8rem;
+   }
 }
 
 @media  screen and (max-width:535px) {
@@ -708,10 +721,6 @@ div.success-modal{
     align-items: flex-start;
    }
 
-    .second {
-   
-   }
-
    h4 ~ p {
     
     position:absolute;
@@ -720,15 +729,45 @@ div.success-modal{
 
    }
 
-   
+   .success-modal p{
+    line-height: 24px;
+}
 }
 
 @media screen and (max-width:462px) {
+    .continer{
+        max-width: 100vw;
+    }
    section{
-        padding:30px;
+        padding:30px 25px;
+    }
+
+    div.modal{
+        padding:25px;
     }
 
     div.card{
-        padding:25px;
+        padding:25px 20px;
     }
+
+    .position_absolute{
+        position: absolute;
+        top:-30px;
+        left:40%;
+    }
+
+    div.second{
+        padding-left: 10px;
+    }
+div.one input{
+    margin-right:10px ;
+}
+
+div.three div.enter-pledge label > .input-control{
+    width: 100%;
+}
+
+h4{
+    gap:5px;
+}
 }

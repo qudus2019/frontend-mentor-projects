@@ -18,7 +18,10 @@ let bookmark_icon = document.querySelector('.bookmark-icon');
 let success = document.querySelector('.success-modal');
 let modal = document.querySelector('.modal');
 let btns = document.querySelectorAll('div.three button');
-let back = document.querySelector('button.back');
+let back = document.querySelector('.back');
+let started = document.querySelector('#modal');
+
+
 bookmark_icon.addEventListener('click',function(e){
     if(bookmark_text.classList.contains('bookmarked')){
         bookmark_text.textContent = 'Bookmark';
@@ -31,9 +34,9 @@ bookmark_icon.addEventListener('click',function(e){
 })
 
 body.addEventListener('click',function(e){
-    if(e.target == icon_toggle){
+    if(e.target.className == 'icon-hamburger'){
         toggler(menu,container);
-}else if(e.target !== icon_toggle){return}
+}else {return}
 })
 
 back_this_project.onclick = function(){
@@ -55,16 +58,12 @@ close_modal.addEventListener('click',function(){
 })
 
 radios.forEach(function(each){
-    each.addEventListener('click',function(e){
-    if(each.checked == true){
-        radios.forEach(function(){
-            each.parentElement.parentElement.parentElement.classList.remove('selected')
-        })
-            each.parentElement.parentElement.parentElement.classList.add('selected');
+    each.addEventListener('change',function(e){
+    if(e.target.checked){
+            e.target.parentElement.parentElement.parentElement.classList.add('selected');
 
-    }else{
-
-        each.parentElement.parentElement.parentElement.classList.remove('selected');
+    }else {
+         each.parentElement.parentElement.parentElement.classList.remove('selected');
         
     }
 })
@@ -94,7 +93,7 @@ function toggler(a,b){
      
     }else{
         a.style.display = 'flex';
-        b.style.opacity = .5;
+        b.style.opacity =1 ;
         icon_toggle.setAttribute('src',"images/icon-close-menu.svg") ;
     }
 }
