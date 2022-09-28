@@ -30,7 +30,7 @@ body::before{
     top:0;
     right:0;
     width:100%;
-    height:300px;
+    height:400px;
     background: url('images/image-hero-desktop.jpg') no-repeat scroll center top;
   
     background-size: cover;
@@ -214,12 +214,12 @@ div.progress-bar:before{
     top:0;
     left:0;
     height:100%;
-    background: var(--Dark-cyan);
+    background: var(--Moderate-cyan);
     width:80%;
     border-radius: 10px;
-    -webkit-animation:run 6s linear .5s ;
-    -moz-animation:run 6s linear .5s ;
-    animation:run 6s linear .5s ;
+    -webkit-animation:run 4s linear 1s ;
+    -moz-animation:run 4s linear 1s ;
+    animation:run 4s linear 1s ;
 }
 
 @keyframes run{
@@ -237,15 +237,15 @@ padding-bottom: 40px;
 
 section.about p{
     line-height: 30px;
-    font-weight: bold;;
+    
 }
 
 div.card{
     margin-top: 30px;
-    outline:2px solid silver;
+    outline:1px solid silver;
     padding: 30px;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 10px;
+border-collapse: separate;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -276,7 +276,7 @@ p.info{
 }
 
 button.select{
-    background: var(--Dark-cyan);
+    background: var(--Moderate-cyan);
     color:white;
     height:fit-content;
     width:150px;
@@ -435,7 +435,7 @@ div.wrap-btns button{
     all:unset;
     padding:10px 15px;
     border-right: 40px;
-    background-color: var(--Dark-cyan);
+    background-color: var(--Moderate-cyan);
     border-radius: 40px;
     color:white;
     font-size: small;
