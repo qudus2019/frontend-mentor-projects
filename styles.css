@@ -84,7 +84,7 @@ li a:hover{
 
 .container{
     width:750px;
-    max-width: 80vw;
+    max-width: 90vw;
     margin:100px auto;
     display:flex;
     flex-direction: column;
@@ -289,11 +289,11 @@ div.title-div h3:hover{
 }
 
 p.info{
-    color:var(--Dark-cyan)
+    color:var(--Moderate-cyan)
 }
 
 button.select{
-    background: var(--Dark-cyan);
+    background: var(--Moderate-cyan);
     color:white;
     height:fit-content;
     width:150px;
@@ -304,7 +304,7 @@ button.select{
 }
 
 button.select:hover{
-background-color: var(--Moderate-cyan);
+background-color: var(--Dark-cyan);
 }
 
 p.left{
@@ -380,7 +380,7 @@ div.one > p{
 input[type='radio']{
     float: left;
     margin-top: 4px;
-    accent-color: var(--Dark-cyan);
+    accent-color: var(--Moderate-cyan);
     width:20px;
     height:20px;
 }
@@ -475,14 +475,14 @@ div.wrap-btns button{
     all:unset;
     padding:10px 15px;
     border-right: 40px;
-    background-color: var(--Dark-cyan);
+    background-color: var(--Moderate-cyan);
     border-radius: 40px;
     color:white;
     font-size: small;
 }
 
 div.wrap-btns button:hover{
-    background-color: var(--Moderate-cyan);
+    background-color: var(--Dark-cyan);
 }
 h4{
     display: flex;
