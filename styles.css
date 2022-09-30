@@ -604,10 +604,11 @@ p.whats-left.mobile{
     font-size: 1.5rem;
     font-weight: bold;
    display:block;
-Padding-bottom:5px;
+Padding-bottom:-10px;
 }
-.desktop{
-display:none;}
+p.whats-left.desktop{
+display:none;
+}
 
 }
 
