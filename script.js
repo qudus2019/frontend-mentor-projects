@@ -20,80 +20,173 @@ let modal = document.querySelector('.modal');
 let btns = document.querySelectorAll('div.three button');
 let back = document.querySelector('.back');
 let started = document.querySelector('#modal');
+let selectBamboo = document.querySelector('#selectBamboo');
+let selectBlack = document.querySelector('#selectBlack');
+let selectMahogany = document.querySelector('#selectMahogany');
+let progressInner = document.querySelector('div.progress-inner');
+let people = document.querySelector('.people').textContent;
 
+//back-this-project button functionality
+back_this_project.addEventListener('click',function(e){
+    openModal(modal);
+})
 
+//bookmark toggle functionality
 bookmark_icon.addEventListener('click',function(e){
+   updateProgress();
     if(bookmark_text.classList.contains('bookmarked')){
         bookmark_text.textContent = 'Bookmark';
         bookmark_text.classList.remove('bookmarked');
+        bookmark_icon.removeAttribute('id');
 
 }else{
     bookmark_text.classList.add('bookmarked');
+    bookmark_icon.setAttribute('id','svg-bookmarked')
     bookmark_text.textContent = 'Bookmarked';
 }
-})
-
-body.addEventListener('click',function(e){
-    if(e.target.className == 'icon-hamburger'){
-        toggler(menu,container);
-}else {return}
-})
-
-back_this_project.onclick = function(){
-   
-}
-about_cards.forEach(function(each){
-    each.addEventListener('click',function(e){
-        if(e.target.className === 'select'){
-            modals_container.style.display = 'flex';
-            sections.style.opacity = .4;
-    }
-    })
 });
 
-close_modal.addEventListener('click',function(){
 
-    close_modal.parentElement.parentElement.style.display = 'none';
-    sections.style.opacity = 1;
+icon_toggle.addEventListener('click',function(e){
+    if(menu.style.display == 'flex'){
+        menu.style.display = 'none';
+        icon_toggle.setAttribute('src',"images/icon-hamburger.svg" )
+
+    }else{
+        menu.style.display = 'flex';
+        icon_toggle.setAttribute('src',"images/icon-close-menu.svg");
+      
+    }
 })
 
+close_modal.addEventListener('click',function(e){
+    close_modal.parentElement.parentElement.style.display = 'none';
+    check();
+    deselect();
+    
+})
+
+back.addEventListener('click',function(e){
+    back.parentElement.style.display = 'none';
+    check();
+})
+
+//radio buttons functionality
+let isChecked = false;
 radios.forEach(function(each){
     each.addEventListener('change',function(e){
-    if(e.target.checked){
-            e.target.parentElement.parentElement.parentElement.classList.add('selected');
+        if(each.checked == true){
+            deselect();
+            each.checked = true;
+            each.parentElement.parentElement.parentElement.classList.add('selected');
+        }else{
+            if(each.checked == false){
+                each.parentElement.parentElement.parentElement.classList.remove('selected');
+            }
+        }
+    })
+})
 
-    }else {
-         each.parentElement.parentElement.parentElement.classList.remove('selected');
-        
-    }
+button_select.forEach(function(each){
+    each.addEventListener('click',function(e){
+        openModal(modal);
+    })
 })
-})
+
+function openModal(modal){
+   
+    modal.style.display = 'block';
+    modal.scrollIntoView();
+    //sections.style.opacity = .4;
+   check();
+   deselect()
+    
+};
+
+//continue button functionality
+
 btns.forEach(function(each){
-    each.onclick = function(e){
-        e.preventDefault();
-        success.style.display = 'grid';
-        modal.style.display = 'none';
-    }
+    each.addEventListener('click',function(e){
+       continueBtn(modal,success);
+    })
 })
 
-back.onclick = function(e){
-    modals_container.style.display = 'none';
-    sections.style.opacity = 1;
+
+
+//function that deselects all radio buttons
+
+function deselect(){
+    let radios = document.querySelectorAll('.form-control');
+  radios.forEach(function(each){
+    each.checked = false;
+ 
+        each.parentElement.parentElement.parentElement.classList.remove('selected');
+    
+  })
 }
 
-
-
-
-function toggler(a,b){
-    if(a.style.display === 'flex'){
-        a.style.display = 'none';
-        b.style.opacity = 1;
-      
-      icon_toggle.setAttribute('src',"images/icon-hamburger.svg") ;
-     
+function check(){
+    if(modal.style.display == 'none'){
+        sections.style.opacity = 1
     }else{
-        a.style.display = 'flex';
-        b.style.opacity =1 ;
-        icon_toggle.setAttribute('src',"images/icon-close-menu.svg") ;
+        sections.style.opacity = .4;
     }
 }
+function continueBtn (toHide,toShow){
+    toHide.style.display = 'none';
+    toShow.style.display = 'grid';
+}
+
+function percentage(){
+    let amountStr = document.querySelector('#theamt').textContent;
+    let amount = strToNum(amountStr);
+    let over = 100000;
+    return (amount/over) * 100 + '%';
+
+}
+
+//console.log(percentage())
+
+
+
+
+var num = '5,000';
+var newNum = num.split(/[]/)
+
+function strToNum(str){
+    let newStr = str.split('');
+    //console.log(newStr);
+    let newer = newStr.filter(function(each){
+       return each != '$' && each != ',';
+    })
+
+    //console.log('newer: ' + newer);
+    return Number(newer.join(''));
+    
+}
+
+//console.log(strToNum(people) + 1)
+strToNum(people) ;
+
+function updateProgress(){
+    document.querySelector('#theamt').textContent = strToNum(document.querySelector('#theamt').textContent) + 100;
+    progressInner.style.width = percentage();
+    document.querySelector('.people').textContent = strToNum(document.querySelector('.people').textContent) + 1;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

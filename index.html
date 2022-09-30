@@ -46,7 +46,7 @@
           <div class="bookmark-icon-wrapper">
             <img src="images/icon-bookmark.svg" alt="bookmark-icon" class="bookmark-icon">
            </div> 
-           <p class="bookmark-text">Bookmark</p>
+           <p class="bookmark-text" >Bookmark</p>
           
         </div>
       </section>
@@ -56,20 +56,22 @@
       <!--Progress section starts here-->
       <section class="progress-section display_flex">
         <div class="progress">
-          <p class="amount top"> $89,914</p>
+          <p class="amount top"> $ <span id="theamt">89,914</span></p>
           <p class="out-of">of $100,000 backed</p>
         </div>
-
+        <div class="divider"></div>
         <div class="progress">
           <p class="people top topp"> 5,007</p>
           <p class="out-of"> total backers</p>
         </div>
-
+<div class="divider"></div>
         <div class="progress">
           <p class="days top">56</p>
           <p class="out-of"> days left</p>
         </div>
-        <div class="progress-bar"></div>
+        <div class="progress-bar">
+          <div class="progress-inner"></div>
+        </div>
       </section>
        <!--Progress section ends here-->
 
@@ -88,7 +90,7 @@
           <p class="description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list.</p>
           
             <p class="left"> 101<span>left</span></p>
-            <button class="select">Select Reward</button>
+            <button class="select" id="selectBamboo">Select Reward</button>
          
         </div>
         
@@ -100,7 +102,7 @@
           <p class="description">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
           
             <p class="left"> 64<span>left</span></p>
-            <button class="select">Select Reward</button>
+            <button class="select" id="selectBlack">Select Reward</button>
           
         </div>
         
@@ -112,19 +114,24 @@
           <p class="description"> You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
           
             <p class="left">0 <span> left</span></p>
-            <button class="select"> Out of Stock</button>
+            <button class="select" id="selectMahogany"> Out of Stock</button>
           </div>
         
       </section>
-    </div></div>
+    </div>
+  </div>
   
   
   <!-- Selection modal start -->
-  <div class="modals-container" id="modals_container">
   
+  <div class="modals-container">
   <div class="modal" id="modal">
-    <img src="images/icon-close-modal.svg" alt="close icon" id="close-modal">
-      <h3 class='title'> Back this project</h3><br>
+    <div class="wrapper">
+      <h3 class='title'> Back this project</h3>
+      <img src="images/icon-close-modal.svg" alt="close icon" id="close-modal">
+    </div>
+    
+      <br>
       <p class="description">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
         <form action="#" name="main-form">
 
@@ -140,17 +147,17 @@
               </label><br>
               <p class="description">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to recieve product updates via email</p>
             </div> <br>
-            <div class="three show">
+            <div class="three">
               <div class="enter-pledge">
-                <label for="no-pledge-pledge" label-control>
-                  <input type="text" placeholder="Enter your pledge" id="no-pledge-pledge" class="input-control">
-                </label>
+                <div class="pledge-container">
+                  <p class="enter-your-pledge">Enter your pledge</p>
+                </div>
               </div>
               <div class="wrap-btns display_flex">
                 <div class="amt">
                   <span>$</span>
-                  <label for="pledge-amt">
-                    <input type="text" id="pledge-amt" value="25" size="2">
+                  <label for="pledge-amt-no-pledge">
+                    <input type="text" class="pledge-amt" value="0" size="2" id="pledge-amt-no-pledge">
                   </label>
                 </div>
                 <button class="btn">Continue</button>
@@ -158,29 +165,6 @@
             </div>
           </div>
 
-            <!--<div class="card no-pledge">
-              <div class="one">
-                <input type="radio" id="no-pledge" class="form-control" name="pledge-type">
-                <label for="no-pledge">
-                  Pledge with no reward
-                </label>
-                <p class="description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign</p>
-              </div>
-              <div class="selected-pledge">
-                
-                  <div class="enter-pledge">
-                    <p class='enter-pledge-desc>Enter your pledge</p>
-                    <div class="amt">
-                      <label for="pledge-amt">
-                        $ <input type="text" class="input-control" placeholder="Enter your pledge">
-                      </label>
-                      <button type='button' class="btn continue-btn">Continue</button>
-                    </div>
-                  </div>
-                
-              </div>
-            </div>
-          -->
           <div class="card bamboo-stand ">
            <div class="one">
               <div class="input">
@@ -188,23 +172,23 @@
             </div>
           </div>
             <div class="second">
-              <label for="bamboo-pledge" class="label-control">
+              <label for="bamboo-pledge" class="control">
                 <h4>Bamboo Stand <span>Pledge $25 or more</span></h4>
-                <p>101 <span>left</span></p>
+                <p class="whats-left">101 <span>left</span></p>
               </label><br>
               <p class="description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign</p>
             </div> <br>
             <div class="three">
               <div class="enter-pledge">
-                <label for="pledge-bamboo">
-                  <input type="text" placeholder="Enter your pledge" id="pledge-bamboo" class="input-control">
-                </label>
+                <div class="pledge-container">
+                  <p class="enter-your-pledge">Enter your pledge</p>
+                </div>
               </div>
               <div class="wrap-btns display_flex">
                 <div class="amt">
                   <span>$</span>
-                  <label for="pledge-amt">
-                    <input type="text" id="pledge-amt" value="25" size="2">
+                  <label for="pledge-amt-bamboo">
+                    <input type="text" class="pledge-amt" value="25" size="2" id="pledge-amt-bamboo">
                   </label>
                 </div>
                 <button class="btn">Continue</button>
@@ -215,27 +199,27 @@
           <div class="card black-pledge">
            <div class="one">
               <div class="input">
-              <input type="radio" id="black-pledge" class="form-control" name="pledge-type" class="">
+              <input type="radio" id="black-pledge" class="form-control" name="pledge-type" value="black-pledge">
             </div>
           </div>
             <div class="second">
-              <label for="black-pledge" class="label-control">
+              <label for="black-pledge" class="control">
                 <h4>Black Edition Stand <span>Pledge $75 or more</span></h4>
-                <p>64<span>left</span></p>
+                <p class="whats-left">64<span>left</span></p>
               </label><br>
               <p class="description">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included.</p>
             </div> <br>
             <div class="three">
               <div class="enter-pledge">
-                <label for="pledge-blackk">
-                  <input type="text" placeholder="Enter your pledge" id="pledge-blackk" class="input-control">
-                </label>
+                <div class="pledge-container">
+                  <p class="enter-your-pledge">Enter your pledge</p>
+                </div>
               </div>
               <div class="wrap-btns display_flex">
                 <div class="amt">
                   <span>$</span>
-                  <label for="pledge-amt">
-                    <input type="text" id="pledge-amt" value="25" size="2">
+                  <label for="pledge-amt-black">
+                    <input type="text" class="pledge-amt" value="25" size="2" id="pledge-amt-black">
                   </label>
                 </div>
                 <button class="btn">Continue</button>
@@ -250,32 +234,33 @@
               </div>
             </div>
               <div class="second">
-                <label for="black-pledge" class="label-control">
+                <label for="black-pledge" class="control">
                   <h4>Mahogany Special<span>Pledge $200 or more</span></h4>
-                  <p>0 <span>left</span></p>
+                  <p class="whats-left">0 <span>left</span></p>
                 </label><br>
                 <p class="description">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign</p>
               </div> <br>
               <div class="three">
                 <div class="enter-pledge">
-                  <label for="pledge-black">
-                    <input type="text" placeholder="Enter your pledge" id="pledge-black" class="input-control">
-                  </label>
+                  <div class="pledge-container">
+                    <p class="enter-your-pledge">Enter your pledge</p>
+                  </div>
                 </div>
                 <div class="wrap-btns display_flex">
                   <div class="amt">
                     <span>$</span>
-                    <label for="pledge-amt">
-                      <input type="text" id="pledge-amt" value="200" size="3">
+                    <label for="pledge-amt-mahogany">
+                      <input type="text" class="pledge-amt" value="25" size="2" id="pledge-amt-mahogany">
                     </label>
                   </div>
                   <button class="btn">Continue</button>
                 </div>
+              </div>
               
             </div>
         </form>
   </div>
-  </div>
+  
   <div class="success-modal">
     <img src="images/icon-check.svg" alt="check">
     <h2 class="thanks">Thanks for your support!</h2>
@@ -283,7 +268,7 @@
     <button class="back" type="submit">Got it!</button>
   
 </div>
-
+</div>
  
 </main>
   <footer></footer>

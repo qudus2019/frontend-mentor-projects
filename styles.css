@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
-:root{
-
+html{
+   
 --Moderate-cyan: hsl(176, 50%, 47%);
 --Dark-cyan: hsl(176, 72%, 28%);
 
@@ -17,12 +17,18 @@ scroll-behavior: smooth;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
-    utline:1px solid green;
     transition:all 1s;
+}
+
+main{
+    display:grid;
+    align-items: center;
+    justify-items: center;
 }
 body{
     background: var(--Dark-gray);
     cursor:pointer;
+    position: relative;
 }
 body::before{
     position:absolute;
@@ -30,9 +36,10 @@ body::before{
     top:0;
     right:0;
     width:100%;
-    height:400px;
+    height:350px;
     background: url('images/image-hero-desktop.jpg') no-repeat scroll center top;
-  
+    width:100%;
+    height:300px;
     background-size: cover;
     z-index: -1;
 }
@@ -40,8 +47,10 @@ body::before{
 header.display_flex{
     display:flex;
     justify-content:space-between;
-    padding:40px 10%;
+    padding:30px 10%;
     position:relative;
+    width:100%;
+      
 }
 
 img.icon-hamburger{
@@ -76,9 +85,10 @@ li a:hover{
 .container{
     width:750px;
     max-width: 80vw;
-    margin:10% auto;
+    margin:100px auto;
     display:flex;
     flex-direction: column;
+    position: relative;
 }
 
 div.sections{
@@ -160,6 +170,10 @@ div#bookmark div:hover{
             transform:translateY(-20px)
         }
     }
+
+    #svg-bookmarked{
+        filter: invert(18%) sepia(9%) saturate(4348%) hue-rotate(129deg) brightness(99%) contrast(84%)
+    }
  
 
 #bookmark p{
@@ -183,6 +197,7 @@ div.progress{
 div.progress:not(:first-child){
     border-left: 1px solid silver;
     text-align: center;
+ 
 }
 
 p.top{
@@ -192,7 +207,7 @@ p.top{
 }
 
 p.out-of{
-    font-weight: 500;
+    font-weight: bold;
     color:silver;
 }
 
@@ -203,19 +218,13 @@ div.progress-bar{
     border-radius: 10px;
     position: relative;
     margin-top: 20px;
-    
 }
 
-
-
-div.progress-bar:before{
-    position:absolute;
-    content:'';
-    top:0;
-    left:0;
+div.progress-inner{
+    
     height:100%;
     background: var(--Moderate-cyan);
-    width:80%;
+    width:89.91%;
     border-radius: 10px;
     -webkit-animation:run 4s linear 1s ;
     -moz-animation:run 4s linear 1s ;
@@ -227,7 +236,7 @@ div.progress-bar:before{
         width:0;
     }
     100%{
-        width:80%;
+        width:89.91%;
     }
 }
 
@@ -244,16 +253,24 @@ div.card{
     margin-top: 30px;
     outline:1px solid silver;
     padding: 30px;
-    border-radius: 10px;
-border-collapse: separate;
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
 }
 
+ p.info{
+    font-weight: bold;
+}
+
+p.left{
+    font-weight: bold;
+}
+
 div.card:hover{
-    outline-color:var(--Moderate-cyan);
+   outline:1px solid var(--Dark-cyan);
 }
 
 div.title-div{
@@ -276,7 +293,7 @@ p.info{
 }
 
 button.select{
-    background: var(--Moderate-cyan);
+    background: var(--Dark-cyan);
     color:white;
     height:fit-content;
     width:150px;
@@ -323,21 +340,25 @@ div.disabled button:hover{
 /* modal default styling*/
 
 div.modal{
-    
-    position: relative;
     width:750px;
     max-width: 80vw;
     margin: 0px auto;
     padding:40px;
     background-color: white;
     border-radius: 8px;
+    
+    
 }
 
 
+
+div.wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
 img#close-modal{
-    position: absolute;
-    top:30px;
-    right:30px;
+   
     cursor:pointer;
     transition:all .2s linear;
 }
@@ -367,10 +388,27 @@ input[type='radio']{
 div.modal div.card{
 display:block;
 padding:20px;
+position:relative;
+}
+
+div.modal div.card:not(:first-child)  p.description{
+    padding-bottom: 30px;
 }
 
 div.second{
     padding-left: 40px;
+    
+}
+
+label.control{
+    
+}
+
+p.whats-left{
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+    
 }
 
 div.selected > div.three{
@@ -384,8 +422,9 @@ div.three{
     border-top: 1px solid silver;
     padding: 20px 0 0 0;
 }
-.label-control > input{
-   padding:5px;
+div.pledge-container p{
+    color:var(--dDark-gray);
+    font-weight: bold;
 }
 
 div.amt{
@@ -405,7 +444,7 @@ div.amt:hover{
     border-color: var(--Moderate-cyan);
 }
 
-.input-control,#pledge-amt{
+.input-control,.pledge-amt{
     padding:0 5px;
     border:none
 }
@@ -414,12 +453,13 @@ div.amt:hover{
    padding:10px;
 font-size: medium;
 }
-#pledge-amt{
+.pledge-amt{
     background: inherit;
     font-weight: bold;
+    font-size: medium;
 }
 
-#pledge-amt:focus,
+.pledge-amt:focus,
 .input-control:focus{
     outline:none;
 }
@@ -435,7 +475,7 @@ div.wrap-btns button{
     all:unset;
     padding:10px 15px;
     border-right: 40px;
-    background-color: var(--Moderate-cyan);
+    background-color: var(--Dark-cyan);
     border-radius: 40px;
     color:white;
     font-size: small;
@@ -455,18 +495,18 @@ h4 > span{
     font-size: 14px;
 }
 
-.label-control{
+.control{
     display:flex;
     justify-content: space-between;
 }
-.label-control p {
+.control p {
     font-weight: bold;
     display:flex;
     align-items: center;
     gap:8px;
 }
 
-.label-control p span{
+.control p span{
     font-size:small ;
     color:silver;
 }
@@ -488,6 +528,7 @@ div.success-modal{
     justify-items: center;
     align-items: center;
     text-align: center;
+    box-shadow: 2px 0 10px var(--dDark-gray);
 }
 
 .success-modal > img{
@@ -520,33 +561,23 @@ div.success-modal{
     background-color: var(--Dark-cyan);
 }
 
-div.container > *{
-   position:absolute;
-}
-
 div.container{
     position:relative;
 }
 
 div.modals-container{
-   display:none;
-   justify-content: center;
-   align-items: center;
-   margin-top: 400px;
-}
-
-
-div.modals-container.flex{
     display:flex;
+    height:fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   position:absolute;
+   top:10%;
 }
-
-
-div.modals-container > *{
-    position:absolute;
-    top:1000px;
-}
-
+div.modal,
 div.success-modal{
+    top:5%;
+    left:9%;
     display:none;
 }
 
@@ -624,9 +655,8 @@ div.success-modal{
 }
 
 @media  screen and (max-width:535px) {
-    div.container{
-        top:80px
-    }
+   
+
     body::before{
        
     }
@@ -639,22 +669,33 @@ div.success-modal{
         flex-direction: column;
         background: white;
         width:82.7%;
-        top:105%;
+        top:100%;
         right:8.7%;
         z-index: 2;
         border-radius: 10px;
-        display:none
+        display:none;
+        box-shadow: 0px 70px 1000px var(--dDark-gray);
     }
 
     ul.nav-menu li{
         margin-left: 0;
-        padding:20px;
+        padding:15px 20px;
+    }
+
+    div.progress:not(:first-child){
+        border-left: 0;
+        text-align: center;
+     
     }
 
     ul li:not(:first-child){
         border-top: 1px solid silver;
     }
-
+div.divider{
+    width:80px;
+    height:2px;
+    background-color: silver;
+}
     a{
         color:black;
         font-size: larger;
@@ -688,17 +729,18 @@ div.success-modal{
 
     div.progress{
         width:100%;
-        text-align: center;
+        text-align: center;  
+    }
+
+    div.progress:not(:first-child){
         padding: 20px 0;;
     }
 
-
-
-    div.progress:not(:first-child){
-        border-left: none;
-        text-align: center;
+    div.progress:first-child{
+        padding-bottom: 20px;
     }
 
+    
     div.progress p.top{
         font-size: 2rem;
     }
@@ -708,7 +750,7 @@ div.success-modal{
     }
 
     div.progress:not(:nth-child(3)){
-        border-bottom: 1px solid silver;
+        border-bottom: 0px solid silver;
 
     }
 
@@ -728,6 +770,21 @@ div.success-modal{
     font-size: 1.5rem;
 
    }
+
+   label.control{
+    position: relative;
+}
+
+
+p.whats-left{
+    font-size: 1.5rem;
+    font-weight: bold;
+    top:145px;
+    padding: 20px 0px;
+
+   
+    
+}
 
    .success-modal p{
     line-height: 24px;
