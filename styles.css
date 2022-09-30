@@ -600,6 +600,15 @@ div.success-modal{
         width:100%;
         justify-content: space-between;
     }
+p.whats-left.mobile{
+    font-size: 1.5rem;
+    font-weight: bold;
+   display:block;
+Padding-bottom:5px;
+}
+.desktop{
+display:none;}
+
 }
 
 @media screen and (max-width:626px){
@@ -662,14 +671,6 @@ div.success-modal{
     font-size: .8rem;
    }
 
-p.whats-left.mobile{
-    font-size: 1.5rem;
-    font-weight: bold;
-   display:block:
-Padding-bottom:5px;
-}
-p.what-left.desktop{
-display:none;}
 
 }
 
@@ -794,14 +795,6 @@ div.divider{
 }
 
 
-p.whats-left.mobile{
-    font-size: 1.5rem;
-    font-weight: bold;
-   display:block:
-Padding-bottom:5px;
-}
-.desktop{
-display:none;}
 
    .success-modal p{
     line-height: 24px;
