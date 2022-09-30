@@ -32,7 +32,7 @@ body{
 pointer-events:none;
 }
 
-button.select, .btn, input, .icon-hamburger, li a, img#close-modal{
+button.select, .btn, input, .icon-hamburger, li a, img#close-modal,.back-this-project,.wrap-btns button,.success-modal button {
 pointer-events:auto;
 }
 body::before{
