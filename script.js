@@ -108,6 +108,7 @@ function openModal(modal){
 btns.forEach(function(each){
     each.addEventListener('click',function(e){
        continueBtn(modal,success);
+       e.preventDefault();
     })
 })
 
