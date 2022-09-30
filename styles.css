@@ -380,7 +380,7 @@ div.one > p{
 input[type='radio']{
     float: left;
     margin-top: 4px;
-    accent-color: var(--Moderate-cyan);
+    accent-color: var(--Dark-cyan);
     width:20px;
     height:20px;
 }
