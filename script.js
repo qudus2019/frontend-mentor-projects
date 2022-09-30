@@ -109,6 +109,8 @@ btns.forEach(function(each){
     each.addEventListener('click',function(e){
         e.preventDefault()
        continueBtn(modal,success);
+	   success.scrollIntoView();
+	   success.style.marginTop = '150px';
     })
 })
 
@@ -133,20 +135,26 @@ function deselect(){
 }
 //select button functionality to updat progress
  btns[1].addEventListener('click',function(e){
-    updateProgress(pledgeAmts[1]);
+    updateProgress(pledgeAmts[1],25);
     let a = document.querySelector('.bamboo-stand .testingg');
     let b = document.querySelector('.bamboo .testing');
     let c = document.querySelector('.bamboo-stand .testinggg');
+    let card = document.querySelector('.card.bamboo-stand');
+    let otherCard = document.querySelector('.card.bamboo')
     updateCards(a,b,c);
+   func(c,card,otherCard);
 
  })
 
  btns[2].addEventListener('click',function(e){
-    updateProgress(pledgeAmts[2]);
+    updateProgress(pledgeAmts[2],75);
     let a = document.querySelector('.black-pledge .testingg');
-    let b = document.querySelector('.black_edition .testing')
-    updateCards(a,b);
+    let b = document.querySelector('.black_edition .testing');
     let c = document.querySelector('.black-pledge .testinggg');
+    let card = document.querySelector('.card.black-pledge');
+    let otherCard = document.querySelector('.card.black_edition')
+	updateCards(a,b,c);
+    func(c,card,otherCard);
  })
 
  btns[3].addEventListener('click',function(e){
@@ -189,11 +197,17 @@ function strToNum(str){
 //console.log(strToNum(people) + 1)
 //strToNum(people) ;
 
-function updateProgress(inputValue){
-    let theamt = strToNum(document.querySelector('#theamt').textContent); 
-    document.querySelector('#theamt').textContent = theamt + Number(inputValue.value);
+function updateProgress(inputValue,minValue){
+    let theamt = strToNum(document.querySelector('#theamt').textContent);
+    if(inputValue.value >= minValue){
+         document.querySelector('#theamt').textContent = theamt + Number(inputValue.value);
+    } else{
+        document.querySelector('#theamt').textContent = theamt + minValue;
+    }
+   
     progressInner.style.width = percentage();
     document.querySelector('.people').textContent = strToNum(document.querySelector('.people').textContent) + 1;
+    checkAndDisable();
   
 }
 function updateCards(a,b,c){
@@ -203,6 +217,39 @@ function updateCards(a,b,c){
      c.textContent = Number(c.textContent) -1;
 
 }
+
+function  checkAndDisable(){
+    let radiosList = document.querySelectorAll('.form-control');
+    let amtRaised = strToNum(document.querySelector('span#theamt').textContent);
+    console.log('Goal reached : ' ,amtRaised);
+
+    if(amtRaised >= 100000){
+        radiosList.forEach(function(each){
+            each.disabled = true;
+            disabledAllCards();
+        })
+    }
+    
+}
+
+function disabledAllCards(){
+    let cards = document.querySelectorAll('.card');
+    for(let i = 0 ; i < cards.length; i++){
+        cards[i].classList.add('disabled');
+    }
+}
+
+function func(a,card,card2){
+    if(+a.textContent === 0){
+    card.classList.add('disabled');
+    card.querySelector('.form-control').disabled = true;
+    card.querySelector('button.btn').style = 'pointer-events: none';
+    card2.classList.add('disabled');
+    card2.querySelector('button.select').textContent = 'Out of Stock';
+    card2.querySelector('button.select').style = 'pointer-events:none';
+}}
+
+
 
 
 
