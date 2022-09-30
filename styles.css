@@ -411,8 +411,9 @@ p.whats-left{
     font-size: 1.5rem;
     font-weight: bold;
    
-    
 }
+
+p.mobile
 
 div.selected > div.three{
     display:flex;
@@ -768,7 +769,6 @@ div.divider{
 
    h4 ~ p {
     
-    position:absolute;
     bottom:0px;
     font-size: 1.5rem;
 
@@ -779,15 +779,13 @@ div.divider{
 }
 
 
-p.whats-left{
+p.whats-left.mobile{
     font-size: 1.5rem;
     font-weight: bold;
-    top:145px;
-    padding: 20px 0px;
-
-   
-    
+   display:block:
 }
+.desktop{
+display:none;}
 
    .success-modal p{
     line-height: 24px;
