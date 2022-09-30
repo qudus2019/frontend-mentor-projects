@@ -412,8 +412,13 @@ p.whats-left{
     font-weight: bold;
    
 }
+p.whats-left span{
+    font-size: 14px;
+    color:silver;
+}
 
-p.mobile
+p.mobile{
+Display: none;}
 
 div.selected > div.three{
     display:flex;
@@ -783,6 +788,7 @@ p.whats-left.mobile{
     font-size: 1.5rem;
     font-weight: bold;
    display:block:
+Padding-bottom:5px;
 }
 .desktop{
 display:none;}
