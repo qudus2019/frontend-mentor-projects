@@ -661,6 +661,16 @@ div.success-modal{
    div.success-modal p{
     font-size: .8rem;
    }
+
+p.whats-left.mobile{
+    font-size: 1.5rem;
+    font-weight: bold;
+   display:block:
+Padding-bottom:5px;
+}
+.desktop{
+display:none;}
+
 }
 
 @media  screen and (max-width:535px) {
