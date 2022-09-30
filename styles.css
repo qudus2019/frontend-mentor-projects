@@ -29,10 +29,7 @@ body{
     background: var(--Dark-gray);
     cursor:pointer;
     position: relative;
-pointer-events:noe;
 }
-
-
 body::before{
     position:absolute;
     content:'';
@@ -87,7 +84,7 @@ li a:hover{
 
 .container{
     width:750px;
-    max-width: 90vw;
+    max-width: 80vw;
     margin:100px auto;
     display:flex;
     flex-direction: column;
@@ -272,6 +269,12 @@ p.left{
     font-weight: bold;
 }
 
+p.left span.testing,
+p.whats-left span.testingg{
+    font-size: 1.5rem;
+    color:black;
+}
+
 div.card:hover{
    outline:1px solid var(--Dark-cyan);
 }
@@ -292,11 +295,11 @@ div.title-div h3:hover{
 }
 
 p.info{
-    color:var(--Moderate-cyan)
+    color:var(--Dark-cyan)
 }
 
 button.select{
-    background: var(--Moderate-cyan);
+    background: var(--Dark-cyan);
     color:white;
     height:fit-content;
     width:150px;
@@ -307,7 +310,7 @@ button.select{
 }
 
 button.select:hover{
-background-color: var(--Dark-cyan);
+background-color: var(--Moderate-cyan);
 }
 
 p.left{
@@ -411,14 +414,8 @@ p.whats-left{
     font-size: 1.5rem;
     font-weight: bold;
    
+    
 }
-p.whats-left span{
-    font-size: 14px;
-    color:silver;
-}
-
-p.mobile{
-Display: none;}
 
 div.selected > div.three{
     display:flex;
@@ -429,7 +426,7 @@ div.three{
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid silver;
-    padding: 10px 0 0 0;
+    padding: 20px 0 0 0;
 }
 div.pledge-container p{
     color:var(--dDark-gray);
@@ -484,14 +481,14 @@ div.wrap-btns button{
     all:unset;
     padding:10px 15px;
     border-right: 40px;
-    background-color: var(--Moderate-cyan);
+    background-color: var(--Dark-cyan);
     border-radius: 40px;
     color:white;
     font-size: small;
 }
 
 div.wrap-btns button:hover{
-    background-color: var(--Dark-cyan);
+    background-color: var(--Moderate-cyan);
 }
 h4{
     display: flex;
@@ -590,6 +587,11 @@ div.success-modal{
     display:none;
 }
 
+p.whats-left.mobile{
+    display:none;
+}
+
+
 @media screen and (max-width:700px){
     div.three{
         flex-direction: column;
@@ -600,16 +602,17 @@ div.success-modal{
         width:100%;
         justify-content: space-between;
     }
-p.whats-left.mobile{
-    font-size: 1.5rem;
-    font-weight: bold;
-   display:block;
-Padding-bottom:-50px;
-}
-p.whats-left.desktop{
-display:none;
-}
+    p.whats-left.desktop{
+        display:none;
+    }
+    p.whats-left.mobile{
+        display:block;
+        padding:0px;
+    }
 
+    div.modal div.card p.description{
+        padding-bottom: 0px;
+    }
 }
 
 @media screen and (max-width:626px){
@@ -671,8 +674,6 @@ display:none;
    div.success-modal p{
     font-size: .8rem;
    }
-
-
 }
 
 @media  screen and (max-width:535px) {
@@ -786,6 +787,7 @@ div.divider{
 
    h4 ~ p {
     
+    position:absolute;
     bottom:0px;
     font-size: 1.5rem;
 
@@ -796,6 +798,15 @@ div.divider{
 }
 
 
+p.whats-left{
+    font-size: 1.5rem;
+    font-weight: bold;
+    top:145px;
+    padding: 20px 0px;
+
+   
+    
+}
 
    .success-modal p{
     line-height: 24px;

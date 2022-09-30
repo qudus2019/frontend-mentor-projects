@@ -25,6 +25,7 @@ let selectBlack = document.querySelector('#selectBlack');
 let selectMahogany = document.querySelector('#selectMahogany');
 let progressInner = document.querySelector('div.progress-inner');
 let people = document.querySelector('.people').textContent;
+let pledgeAmts = document.querySelectorAll('.pledge-amt');
 
 //back-this-project button functionality
 back_this_project.addEventListener('click',function(e){
@@ -33,7 +34,7 @@ back_this_project.addEventListener('click',function(e){
 
 //bookmark toggle functionality
 bookmark_icon.addEventListener('click',function(e){
-   updateProgress();
+   //updateProgress(document.querySelector('#pledge-amt-bamboo'));
     if(bookmark_text.classList.contains('bookmarked')){
         bookmark_text.textContent = 'Bookmark';
         bookmark_text.classList.remove('bookmarked');
@@ -63,7 +64,6 @@ close_modal.addEventListener('click',function(e){
     close_modal.parentElement.parentElement.style.display = 'none';
     check();
     deselect();
-    
 })
 
 back.addEventListener('click',function(e){
@@ -107,10 +107,16 @@ function openModal(modal){
 
 btns.forEach(function(each){
     each.addEventListener('click',function(e){
+        e.preventDefault()
        continueBtn(modal,success);
-       e.preventDefault();
     })
 })
+
+// for(let i = 0 ; i < btns.length; i++){
+//     btns[i].addEventListener('click',function(e){
+//         updateProgress(inputValue[i]);
+//     })
+// }
 
 
 
@@ -125,6 +131,27 @@ function deselect(){
     
   })
 }
+//select button functionality to updat progress
+ btns[1].addEventListener('click',function(e){
+    updateProgress(pledgeAmts[1]);
+    let a = document.querySelector('.bamboo-stand .testingg');
+    let b = document.querySelector('.bamboo .testing');
+    let c = document.querySelector('.bamboo-stand .testinggg');
+    updateCards(a,b,c);
+
+ })
+
+ btns[2].addEventListener('click',function(e){
+    updateProgress(pledgeAmts[2]);
+    let a = document.querySelector('.black-pledge .testingg');
+    let b = document.querySelector('.black_edition .testing')
+    updateCards(a,b);
+    let c = document.querySelector('.black-pledge .testinggg');
+ })
+
+ btns[3].addEventListener('click',function(e){
+    updateProgress(pledgeAmts[3]);
+ })
 
 function check(){
     if(modal.style.display == 'none'){
@@ -136,7 +163,6 @@ function check(){
 function continueBtn (toHide,toShow){
     toHide.style.display = 'none';
     toShow.style.display = 'grid';
-    toShow.scrollIntoView();
 }
 
 function percentage(){
@@ -149,12 +175,6 @@ function percentage(){
 
 //console.log(percentage())
 
-
-
-
-var num = '5,000';
-var newNum = num.split(/[]/)
-
 function strToNum(str){
     let newStr = str.split('');
     //console.log(newStr);
@@ -164,17 +184,23 @@ function strToNum(str){
 
     //console.log('newer: ' + newer);
     return Number(newer.join(''));
-    
 }
 
 //console.log(strToNum(people) + 1)
-strToNum(people) ;
+//strToNum(people) ;
 
-function updateProgress(){
-    document.querySelector('#theamt').textContent = strToNum(document.querySelector('#theamt').textContent) + 100;
+function updateProgress(inputValue){
+    let theamt = strToNum(document.querySelector('#theamt').textContent); 
+    document.querySelector('#theamt').textContent = theamt + Number(inputValue.value);
     progressInner.style.width = percentage();
     document.querySelector('.people').textContent = strToNum(document.querySelector('.people').textContent) + 1;
-
+  
+}
+function updateCards(a,b,c){
+    a.textContent = Number(a.textContent) -1;
+    b.textContent = Number(b.textContent) -1;
+   
+     c.textContent = Number(c.textContent) -1;
 
 }
 
