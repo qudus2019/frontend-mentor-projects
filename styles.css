@@ -429,7 +429,7 @@ div.three{
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid silver;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
 }
 div.pledge-container p{
     color:var(--dDark-gray);
@@ -604,7 +604,7 @@ p.whats-left.mobile{
     font-size: 1.5rem;
     font-weight: bold;
    display:block;
-Padding-bottom:-10px;
+Padding-bottom:-50px;
 }
 p.whats-left.desktop{
 display:none;
