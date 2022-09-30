@@ -32,8 +32,9 @@ body{
 pointer-events:none;
 }
 
-button, input, .icon-hamburger, li a, img.close-modal{
-pointer-events:auto;}
+button.select, .btn, input, .icon-hamburger, li a, img#close-modal{
+pointer-events:auto;
+}
 body::before{
     position:absolute;
     content:'';
