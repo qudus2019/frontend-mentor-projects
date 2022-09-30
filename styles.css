@@ -31,6 +31,9 @@ body{
     position: relative;
 pointer-events:none;
 }
+
+body *{
+pointer-events:auto;}
 body::before{
     position:absolute;
     content:'';
