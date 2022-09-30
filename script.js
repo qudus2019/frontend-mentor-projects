@@ -135,6 +135,7 @@ function check(){
 function continueBtn (toHide,toShow){
     toHide.style.display = 'none';
     toShow.style.display = 'grid';
+    toShow.scrollIntoView();
 }
 
 function percentage(){
