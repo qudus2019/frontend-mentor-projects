@@ -29,6 +29,7 @@ body{
     background: var(--Dark-gray);
     cursor:pointer;
     position: relative;
+pointer-events:none;
 }
 body::before{
     position:absolute;
