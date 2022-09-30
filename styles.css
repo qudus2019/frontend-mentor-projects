@@ -29,12 +29,10 @@ body{
     background: var(--Dark-gray);
     cursor:pointer;
     position: relative;
-pointer-events:none;
+pointer-events:noe;
 }
 
-button.select, .btn, input, .icon-hamburger, li a, img#close-modal,.back-this-project,.wrap-btns button,.success-modal button {
-pointer-events:auto;
-}
+
 body::before{
     position:absolute;
     content:'';
