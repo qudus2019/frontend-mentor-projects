@@ -49,15 +49,16 @@ bookmark_icon.addEventListener('click',function(e){
 
 
 icon_toggle.addEventListener('click',function(e){
-    if(menu.style.display == 'flex'){
-        menu.style.display = 'none';
+     if(menu.style.opacity == 1){
+        menu.style.opacity = 0;
         icon_toggle.setAttribute('src',"images/icon-hamburger.svg" )
 
     }else{
-        menu.style.display = 'flex';
-        icon_toggle.setAttribute('src',"images/icon-close-menu.svg");
+         menu.style.opacity = 1;
+         icon_toggle.setAttribute('src',"images/icon-close-menu.svg");
       
     }
+   
 })
 
 close_modal.addEventListener('click',function(e){
