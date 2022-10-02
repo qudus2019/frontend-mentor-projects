@@ -1,99 +1,86 @@
-let icon_toggle = document.querySelector('.icon-hamburger');
-let menu = document.querySelector('.nav-menu');
-
-let container = document.querySelector('.container');
-let body = document.querySelector('body');
-let progress_bar = document.querySelector('.progress-bar');
-let modals_container = document.querySelector('#modals_container');
-
-let button_select = document.querySelectorAll('.select');
-let close_modal = document.querySelector('#close-modal');
-let about_cards = document.querySelectorAll('section.about > div.card');
-let radios = document.querySelectorAll('.form-control');
-let sections = document.querySelector('div.sections');
-let back_this_project = document.querySelector('.back-this-project');
-let backed = document.querySelector('.topp');
-let bookmark_text = document.querySelector('.bookmark-text');
-let bookmark_icon = document.querySelector('.bookmark-icon');
-let success = document.querySelector('.success-modal');
-let modal = document.querySelector('.modal');
-let btns = document.querySelectorAll('div.three button');
-let back = document.querySelector('.back');
-let started = document.querySelector('#modal');
+let buttons = document.querySelectorAll('div.select-tip button');
+let inputs = document.querySelectorAll('.input-control');
+let outputs = document.querySelectorAll('.amt');
+const resetBtn = document.querySelector('.reset');
 
 
-bookmark_icon.addEventListener('click',function(e){
-    if(bookmark_text.classList.contains('bookmarked')){
-        bookmark_text.textContent = 'Bookmark';
-        bookmark_text.classList.remove('bookmarked');
-
-}else{
-    bookmark_text.classList.add('bookmarked');
-    bookmark_text.textContent = 'Bookmarked';
-}
+buttons.forEach(function(button){
+    console.log(button.name,button.value);
+    button.addEventListener('click',function(e){
+        deselect();
+        button.classList.toggle('selected');
+        // if(inputs[0].textContent !== '' && inputs[2].textContent !== ''){
+        //     grabAllValues(e.target);
+        // }else{return}
+        grabAllValues(e.target)
+    })
 })
 
-body.addEventListener('click',function(e){
-    if(e.target.className == 'icon-hamburger'){
-        toggler(menu,container);
-}else {return}
-})
+//function to deselect all other buttons
 
-back_this_project.onclick = function(){
+function deselect(){
+    document.querySelectorAll('div.select-tip button').forEach(function(button){
+        button.classList.remove('selected');
+        document.querySelector('#custom-tip').classList.remove('selected');
+        inputs[1].value = '';
+    })
+};
+
+//function that takes the value of a button or input and convert it to number
+function converter(input){
+    if(input.value == ''){
+        return input.value = '';
+    }else{
+         console.log(parseFloat(input.value));
+    return parseFloat(input.value);
+    }
    
 }
-about_cards.forEach(function(each){
-    each.addEventListener('click',function(e){
-        if(e.target.className === 'select'){
-            modals_container.style.display = 'flex';
-            sections.style.opacity = .4;
-    }
-    })
-});
 
-close_modal.addEventListener('click',function(){
-
-    close_modal.parentElement.parentElement.style.display = 'none';
-    sections.style.opacity = 1;
-})
-
-radios.forEach(function(each){
-    each.addEventListener('change',function(e){
-    if(e.target.checked){
-            e.target.parentElement.parentElement.parentElement.classList.add('selected');
-
-    }else {
-         each.parentElement.parentElement.parentElement.classList.remove('selected');
-        
-    }
-})
-})
-btns.forEach(function(each){
-    each.onclick = function(e){
-        e.preventDefault();
-        success.style.display = 'grid';
-        modal.style.display = 'none';
-    }
-})
-
-back.onclick = function(e){
-    modals_container.style.display = 'none';
-    sections.style.opacity = 1;
-}
-
-
-
-
-function toggler(a,b){
-    if(a.style.display === 'flex'){
-        a.style.display = 'none';
-        b.style.opacity = 1;
-      
-      icon_toggle.setAttribute('src',"images/icon-hamburger.svg") ;
-     
+//function that grabs all values 
+function grabAllValues(percentage){
+    if(inputs[2].value < 1 || inputs[2].value == ''){
+        inputs[2].parentElement.parentElement.parentElement.classList.add('invalid');
+        return
     }else{
-        a.style.display = 'flex';
-        b.style.opacity =1 ;
-        icon_toggle.setAttribute('src',"images/icon-close-menu.svg") ;
+        inputs[2].parentElement.parentElement.parentElement.classList.remove('invalid');
     }
+    let tip = (converter(inputs[0]) * (converter(percentage) / 100)) / Math.floor(converter(inputs[2]));
+    let total = (converter(inputs[0]) / Math.floor(converter(inputs[2])) + tip);
+   
+        outputs[0].textContent = tip.toFixed(2);
+         outputs[1].textContent = total.toFixed(2);
+         inputs[2].value = Math.floor(converter(inputs[2]));
+    resetBtn.classList.add('active');
 }
+
+//reset button functionality
+
+resetBtn.addEventListener('click',function(e){
+    inputs.forEach(function(each){
+        each.value = '';
+    })
+    outputs[0].textContent = 0;
+    outputs[1].textContent = 0;
+    deselect();
+    resetBtn.classList.remove('active');
+
+})
+
+//custom tip functionality
+inputs[1].addEventListener('keyup',function(e){
+    let value = this.value;
+    console.log('Custom tip is: ' ,value);
+    deselect();
+    this.value = value;
+    this.classList.add('selected');
+    grabAllValues(this);
+})
+
+inputs[2].addEventListener('keyup',(e) =>{
+    let selectedTip = document.querySelector('.selected');
+    grabAllValues(selectedTip);
+})
+
+
+
