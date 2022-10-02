@@ -15,7 +15,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -34,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-tip-calculator-html-css-and-vanilla-javascript-7Ltdl0PjXt)
-- Live Site URL: [Add live site URL here](https://tip-calculator-24.netlify.app/)
+- Solution URL: [GitHub](https://www.frontendmentor.io/solutions/responsive-tip-calculator-html-css-and-vanilla-javascript-7Ltdl0PjXt)
+- Live Site URL: [Netlify](https://tip-calculator-24.netlify.app/)
 
 ## My process
 
