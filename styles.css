@@ -18,18 +18,23 @@ scroll-behavior: smooth;
     text-decoration: none;
     box-sizing: border-box;
     transition:all 1s;
+    
 }
 
 main{
     display:grid;
     align-items: center;
     justify-items: center;
+    
 }
+
 body{
     background: var(--Dark-gray);
-    cursor:pointer;
+   /* cursor:pointer; */
     position: relative;
 }
+
+
 body::before{
     position:absolute;
     content:'';
@@ -48,7 +53,7 @@ header.display_flex{
     padding:30px 10%;
     position:relative;
     width:100%;
-      
+     
 }
 
 img.icon-hamburger{
@@ -136,6 +141,7 @@ section{
     padding:17px 35px;
     margin-top: 40px;
 }
+
 
 .back-this-project:hover{
     background-color: var(--Dark-cyan);
@@ -259,11 +265,8 @@ div.card{
 
 }
 
- p.info{
-    font-weight: bold;
-}
-
-p.left{
+ p.info,
+ p.left{
     font-weight: bold;
 }
 
@@ -272,6 +275,8 @@ p.whats-left span.testingg{
     font-size: 1.5rem;
     color:black;
 }
+
+
 
 div.card:hover{
    outline:1px solid var(--Dark-cyan);
@@ -287,6 +292,7 @@ div.title-div{
 div.title-div h3{
     font-weight: bold;
 }
+
 
 div.title-div h3:hover{
     color:var(--Moderate-cyan);
@@ -306,6 +312,7 @@ button.select{
     border-radius: 40px;
     border:none
 }
+
 
 button.select:hover{
 background-color: var(--Moderate-cyan);
@@ -403,15 +410,10 @@ div.second{
     
 }
 
-label.control{
-    
-}
-
 p.whats-left{
     font-size: 1.5rem;
     font-weight: bold;
-   
-    
+ 
 }
 
 div.selected > div.three{
@@ -577,6 +579,7 @@ div.modals-container{
    position:absolute;
    top:10%;
 }
+
 div.modal,
 div.success-modal{
     top:5%;
@@ -587,6 +590,8 @@ div.success-modal{
 p.whats-left.mobile{
     display:none;
 }
+
+ 
 
 
 @media screen and (max-width:700px){
@@ -619,10 +624,6 @@ p.whats-left.mobile{
 
     div.progress p.out-of{
         font-size: small;
-    }
-
-    body{
-        font-size: rem;
     }
 
     h1.title{
@@ -678,11 +679,11 @@ p.whats-left.mobile{
     margin:100px auto;
    }
 
-    body::before{
-       height:260px;
-       background: url('images/image-hero-mobile.jpg') no-repeat scroll center top;
-       background-size: cover;
-    }
+   body::before{
+    height:260px;
+    background: url('images/image-hero-mobile.jpg') no-repeat scroll center top;
+    background-size: cover;
+ }
     img.icon-hamburger{
         display:block;
     }
