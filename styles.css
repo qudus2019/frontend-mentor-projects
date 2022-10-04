@@ -1,0 +1,173 @@
+
+*,*::before,*::after{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: helvetica;
+}
+
+header{
+    background: url('images/bg-header-desktop.png') no-repeat scroll center;
+    background-size: cover;
+    display:grid;
+    justify-items: center;
+    padding:7rem 0;
+}
+
+main{
+    width:100%;
+    display:grid;
+    align-items: center;
+    justify-items: center;
+}
+
+
+h1{
+    font-size: 2.5rem;
+    padding: 30px 0 20px;
+}
+
+h1 ~ p {
+    color:silver;
+    font-size: 1.3rem;
+    width:50%;
+    padding-bottom:40px;
+    text-align: center;
+}
+
+div.btn-group {
+    display:flex;
+    gap:10px;
+}
+
+.btn{
+    all:unset;
+    width:fit-content;
+    height:40px;
+    border-radius: 60px;
+    color:white;
+    font-weight: bold;
+    padding:6px 30px;
+}
+
+.forIOS{
+    background-color: green;
+    box-shadow: 0px 7px 5px rgb(185, 210, 185);
+}
+.forMac{
+    background-color: blue;
+    box-shadow: 0px 7px 5px rgb(189, 189, 222);
+}
+
+section{
+    display:flex;
+
+}
+
+section#intro{
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    font-size: 2.3rem;
+    color:gray;
+}
+
+h2 ~ p{
+    width:50%;
+    font-size: 1.1rem;
+    color:silver;
+    text-align: center;
+    padding:20px 0;
+    line-height: 30px;
+    
+}
+
+section#intro{
+    margin: 100px 0;
+}
+
+section#intro > div{
+    margin: 80px 0;
+    display:grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    align-items: center;
+}
+
+img#desktop{
+    max-width: 100%;
+    
+}
+
+
+div.features{
+   
+    padding-inline-start: 20%;
+    
+}
+
+h3.title{
+    font-size: 1.7rem;
+    padding: 10px 0;
+}
+
+h3.title ~ p{
+    font-size: 1.07rem;
+    color:silver;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+
+div.screen-wrapper{
+    margin: 4rem 0;
+}
+
+section.tools-section{
+    width:100%;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+
+section.tools-section h2,
+section.tools-section > p{
+    width:100%;
+    text-align: center;
+}
+
+article{
+    width:25%;
+    display:grid;
+    gap:0px;
+    justify-items: center;
+    text-align: center;
+    padding: 20px;
+    height:200px;
+    min-height: fit-content;
+}
+
+article .tool-logo{
+    padding-bottom: 10px;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+article p{
+    color:silver;
+}
+
+section.brand-logos{
+    width:100%;
+    display:flex;
+
+    gap:20px;
+    flex-wrap: wrap;
+    
+}
