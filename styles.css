@@ -45,7 +45,9 @@ div.btn-group {
 .btn{
     all:unset;
     width:fit-content;
-    height:40px;
+    min-width: 180px;
+    text-align: center;
+    height:50px;
     border-radius: 60px;
     color:white;
     font-weight: bold;
@@ -106,6 +108,7 @@ img#desktop{
 div.features{
    
     padding-inline-start: 20%;
+    padding-inline-end: 200px;
     
 }
 
@@ -149,6 +152,7 @@ article{
     padding: 20px;
     height:200px;
     min-height: fit-content;
+    
 }
 
 article .tool-logo{
@@ -162,13 +166,92 @@ article h3 {
 
 article p{
     color:silver;
+   line-height: 30px;
+    font-weight: bold;
 }
 
 section.brand-logos{
     width:100%;
     display:flex;
-
-    gap:20px;
+    justify-content: space-evenly;
+    gap:0px;
     flex-wrap: wrap;
+    margin: 160px 0 130px 0;
+
+}
+
+.brand-logos img{
+    width:150px;
+    height:40px;
+
+}
+
+div.download{
+    display:grid;
+    align-items: center;
+    justify-items: center;margin-bottom: 100px;
+}
+
+div.download p{
+    width:800px;
+    font-size: 1.4rem;
+    padding-bottom: 50px;
+}
+
+footer{
+    display:flex;
+     width: 100%;
     
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+footer{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   
+}
+ul.nav-links{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+}
+div.attribution-div{
+    width:100%;
+    padding:40px;
+}
+nav{
+    display:flex;
+    gap:100px;
+    align-items: center;
+}
+
+ul.socials{
+    display:flex;
+    gap:20px;
+}
+
+footer .logo{
+    width:70px;
+  
+}
+
+a{
+    color:gray;
+    
+    font-size: large;
+}
+
+a:hover{
+    outline:1px solid black;
+    background: black;
+    color:white;
+    padding:5px;
+
+
+}
+
+.btn:hover{
+    opacity: .5;
 }
