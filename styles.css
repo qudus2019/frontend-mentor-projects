@@ -13,6 +13,7 @@ header{
     display:grid;
     justify-items: center;
     padding:7rem 0;
+width:100%;
 }
 
 main{
